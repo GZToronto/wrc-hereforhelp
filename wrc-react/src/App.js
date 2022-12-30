@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+// components
+import MyDisclosure from './components/MyDisclosure'
+
+// styles
+import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app-body">
+      <header id="wrc" className="App-header">
+        <h2>How can we help</h2>
+        <MyDisclosure />
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
