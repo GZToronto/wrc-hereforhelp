@@ -29,7 +29,7 @@
   --full-module: calc(
     var(--tool-width) - var(--small-unit) - calc(2 * var(--large-unit))
   );
-  --half-module: calc(var(--full-module) / 2);
+  --half-module: calc(50% - calc(var(--small-unit) / 2));
   --quarter-module: calc(var(--half-module) / 2);
 
   --border-thin: 2px solid var(--accent-color);

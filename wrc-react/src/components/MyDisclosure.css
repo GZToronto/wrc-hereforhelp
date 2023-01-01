@@ -55,18 +55,16 @@
 
 .tool-response.half {
   display: inline-flex;
-  /* width: calc(50% - var(--small-unit)); */
-  /* width: calc(50%); */
   min-height: var(--quarter-module);
   width: var(--half-module);
   border-bottom: none;
 }
 .tool-response.half:nth-of-type(odd) {
   padding-right: var(--small-unit);
-  /* background-color: red; */
 }
 .tool-response.half:nth-of-type(even) {
   padding-right: 0;
+  margin-right: 0;
 }
 
 /* supplanted by data-headless-ui-state declaration below */
