@@ -3,9 +3,9 @@
   --bg-offset-color: hsl(273, 69%, 90%);
   --hover-color: hsl(273, 69%, 88%);
   --accent-color: hsl(4, 85%, 57%); */
-  --bg-primary-color: hsl(269, 50%, 76%);
-  --bg-offset-color: hsl(273, 69%, 90%);
-  --hover-color: hsl(273, 69%, 88%);
+  --bg-primary-color: hsl(60, 0%, 97%);
+  --bg-offset-color: hsl(60, 86%, 97%);
+  --hover-color: hsl(4, 85%, 97.5%);
   --accent-color: hsl(4, 85%, 57%);
 
   /* TEXT */
@@ -72,8 +72,8 @@ p {
   margin: 0;
   padding: 0.5rem;
 
-  border: 1px solid black;
-  border-radius: 0.25rem;
+  border: 2px dashed black;
+  border-radius: 0.5rem;
 
   font-size: 0.8625rem;
 }
@@ -142,8 +142,8 @@ p {
 
 #wrc .tool-container h2 {
   margin: 0;
-  padding-left: var(--small-unit);
-  padding-right: var(--small-unit);
+  /* padding-left: var(--small-unit); */
+  /* padding-right: var(--small-unit); */
 
   display: inline-flex;
   align-self: center;

@@ -1,3 +1,10 @@
+.tool-response:focus-visible,
+.tool-question:focus-visible,
+.tool-question > a:focus-visible,
+.tool-response > a:focus-visible {
+  outline: var(--accent-color) auto 6px;
+}
+
 .tool-question {
   background-color: transparent;
 
