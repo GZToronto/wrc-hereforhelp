@@ -1,5 +1,5 @@
-// import { Disclosure, Transition } from '@headlessui/react'
-import { Disclosure } from '@headlessui/react'
+import { Disclosure, Transition } from '@headlessui/react'
+// import { Disclosure } from '@headlessui/react'
 
 // styles
 import './MyDisclosure.css'
@@ -50,7 +50,7 @@ function MyDisclosure() {
               <p className="tool-response inline">
                 <a href="foo">By email: </a>
               </p>
-              <p className="tool-response">
+              <p className="tool-response inline">
                 <a href="foo">By telephone: 1-800-111-1234 </a>
               </p>
               {/* <p className="tool-response ">
@@ -119,7 +119,7 @@ function MyDisclosure() {
               <p className="tool-response inline">
                 <a href="foo">By email: </a>
               </p>
-              <p className="tool-response ">
+              <p className="tool-response inline ">
                 <a href="foo">By telephone: 1-800-111-1234 </a>
               </p>
               {/* <p className="tool-response ">
@@ -132,32 +132,32 @@ function MyDisclosure() {
             <Disclosure.Button className="tool-response inline">
               I’d like to review information about employment rights
             </Disclosure.Button>
-            {/* <Transition
+            <Transition
               enter="transition duration-500 ease-out"
               enterFrom="transform scale-95 opacity-0"
               enterTo="transform scale-100 opacity-100"
               leave="transition duration-75 ease-out"
               leaveFrom="transform scale-100 opacity-100"
               leaveTo="transform scale-95 opacity-0"
-            > */}
-            <Disclosure.Panel>
-              <p className="tool-response inline half">
-                <a href="foo">Website 1</a>
-              </p>
-              <p className="tool-response inline half">
-                <a href="foo">Website 2</a>
-              </p>
-              <p className="tool-response inline half">
-                <a href="foo">Website 3</a>
-              </p>
-              <p className="tool-response inline half">
-                <a href="foo">Website 4</a>
-              </p>
-              {/* <p className="tool-response ">
+            >
+              <Disclosure.Panel>
+                <p className="tool-response inline half">
+                  <a href="foo">Website 1</a>
+                </p>
+                <p className="tool-response inline half">
+                  <a href="foo">Website 2</a>
+                </p>
+                <p className="tool-response inline half">
+                  <a href="foo">Website 3</a>
+                </p>
+                <p className="tool-response inline half">
+                  <a href="foo">Website 4</a>
+                </p>
+                {/* <p className="tool-response ">
               <a href="foo">By chat: </a>
             </p> */}
-            </Disclosure.Panel>
-            {/* </Transition> */}
+              </Disclosure.Panel>
+            </Transition>
           </Disclosure>{' '}
           <p className="tool-response">
             <a href="foo">Exit</a>
@@ -266,13 +266,13 @@ function MyDisclosure() {
               leaveTo="transform scale-95 opacity-0"
             > */}
             <Disclosure.Panel>
-              <p className="tool-response inline half no-border">
+              <p className="tool-response half">
                 <a href="foo">Website 1 Nibh Vestibulum Mollis Condimentum</a>
               </p>
-              <p className="tool-response inline half no-border">
+              <p className="tool-response half">
                 <a href="foo">Website 2 Amet Magna Ullamcorper</a>
               </p>
-              <p className="tool-response inline half">
+              <p className="tool-response half">
                 <a href="foo">Website 3 Euismod Vestibulum Fermentum Risus</a>
               </p>
               <p className="tool-response half ">

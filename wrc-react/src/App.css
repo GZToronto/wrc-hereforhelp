@@ -22,6 +22,7 @@
   /* SIZING */
   /* --tool-width: 490px; */
   --tool-width: 600px;
+  --padding: 20px 0px;
 
   --small-unit: 10px;
   --large-unit: 20px;
@@ -29,10 +30,13 @@
   --half-module: calc(var(--full-module) / 2);
   --quarter-module: calc(var(--half-module) / 2);
 
+  --border-thin: 2px solid var(--accent-color);
+  --border-medium: 3px solid var(--accent-color);
+  --border-thick: 6px solid var(--accent-color);
+
   /* Figma spec */
   /* --border-radius-large: 24px; */
   /* --border-radius-small: 12px; */
-
   /* Assumed Metric */
   --border-radius-large: 20px;
   --border-radius-small: 10px; /* TBD refactor */
@@ -66,11 +70,13 @@ p {
 .app-body {
   background-color: var(--bg-primary-color);
 
+  padding: 50px;
+
   min-height: 100vh;
   display: flex;
   gap: var(--large-unit);
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: top;
   justify-content: center;
   font-size: calc(10px + 2vmin);
 }
@@ -115,14 +121,14 @@ p {
 
 #wrc .tool-container h2 {
   margin: 0;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: var(--small-unit);
+  padding-right: var(--small-unit);
 
   display: inline-flex;
   align-self: center;
   width: stretch;
 
-  border-bottom: 6px solid hsl(4, 85%, 57%);
+  /* border-bottom: 6px solid hsl(4, 85%, 57%); */
 }
 
 #wrc .no-border {
