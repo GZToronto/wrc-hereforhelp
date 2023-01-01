@@ -63,7 +63,16 @@ function MyDisclosure() {
             <a href="foo">I’d like to review relevant information</a>
           </p>
           <p className="tool-response">
-            <a href="foo">Exit</a>
+            <a
+              href=""
+              // onClick={() => {
+              //   // await fetch('/accept-terms', { method: 'POST' })
+              //   // eslint-disable-next-line
+              //   close()
+              // }}
+            >
+              Exit
+            </a>
           </p>
         </Disclosure.Panel>
         {/* </Transition> */}
