@@ -8,8 +8,12 @@ function App() {
   return (
     <div className="app-body">
       <header id="wrc" className="App-header">
+        foo bar
         <h2>How can we help</h2>
-        <MyDisclosure />
+        <div className="tool-container">
+          <h2>How can we help</h2>
+          <MyDisclosure />
+        </div>
       </header>
     </div>
   )

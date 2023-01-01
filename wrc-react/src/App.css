@@ -1,3 +1,53 @@
+:root {
+  --bg-primary-color: hsl(269, 50%, 76%);
+  --bg-offset-color: hsl(273, 69%, 90%);
+  --hover-color: hsl(273, 69%, 88%);
+  --accent-color: hsl(4, 85%, 57%);
+
+  /* TEXT */
+  --text-primary-color: hsl(272, 52%, 10%);
+  --font-primary: 'Helvetica Neue';
+  --font-style-standard: normal;
+  --font-size-heading: 24px;
+  --font-size-standard: 20px;
+  --font-size-small: 16px;
+  --line-height-XXL: 312%;
+  --line-height-heading: 120%;
+  --line-height-standard: 120%;
+  --line-height-small: 95%; /* TBD refactor */
+
+  --font-weight-standard: 400;
+  --font-weight-bold: 600; /* TBD refactor */
+
+  /* SIZING */
+  /* --tool-width: 490px; */
+  --tool-width: 600px;
+
+  --small-unit: 10px;
+  --large-unit: 20px;
+  --full-module: calc(var(--tool-width) - calc(9 * var(--small-unit)));
+  --half-module: calc(var(--full-module) / 2);
+  --quarter-module: calc(var(--half-module) / 2);
+
+  /* Figma spec */
+  /* --border-radius-large: 24px; */
+  /* --border-radius-small: 12px; */
+
+  /* Assumed Metric */
+  --border-radius-large: 20px;
+  --border-radius-small: 10px; /* TBD refactor */
+}
+
+p {
+  font-family: var(--font-primary);
+  font-style: var(--font-style-standard);
+  font-weight: var(--font-weight-standard);
+  font-size: var(--font-size-standard);
+  line-height: var(--line-height-standard);
+  letter-spacing: -0.01em;
+  text-align: start;
+}
+
 .App {
   /* text-align: center; */
 }
@@ -14,18 +64,15 @@
 } */
 
 .app-body {
-  /* background-color: #747474; */
-
-  background-color: #e7d4f7;
+  background-color: var(--bg-primary-color);
 
   min-height: 100vh;
   display: flex;
-  gap: 20px;
+  gap: var(--large-unit);
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 /* /
@@ -36,24 +83,48 @@
 /* WRC TOOL */
 
 #wrc {
-  width: 490px;
+  width: var(--tool-width);
 }
 
 #wrc h2 {
-  font-family: 'Helvetica Neue';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 50px;
+  font-family: var(--font-primary);
+  font-style: var(--font-size-standard);
+  font-weight: var(--font-weight-standard);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-XXL);
   /* identical to box height, or 312% */
   text-transform: uppercase;
   /* text-align: left; */
 
   letter-spacing: 0.04em;
 
-  /* background-color: magenta; */
+  color: var(--text-primary-color);
+}
 
-  color: #1a0c26;
+#wrc .tool-container {
+  margin: var(--large-unit);
+  padding: var(--large-unit);
 
-  border-bottom: 6px solid #ef4136;
+  overflow: hidden;
+
+  background-color: var(--bg-offset-color);
+
+  /* border: 1px solid var(--text-primary-color); */
+  border-radius: var(--border-radius-large);
+}
+
+#wrc .tool-container h2 {
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  display: inline-flex;
+  align-self: center;
+  width: stretch;
+
+  border-bottom: 6px solid hsl(4, 85%, 57%);
+}
+
+#wrc .no-border {
+  border: 0;
 }

@@ -266,17 +266,17 @@ function MyDisclosure() {
               leaveTo="transform scale-95 opacity-0"
             > */}
             <Disclosure.Panel>
-              <p className="tool-response inline half">
-                <a href="foo">Website 1</a>
+              <p className="tool-response inline half no-border">
+                <a href="foo">Website 1 Nibh Vestibulum Mollis Condimentum</a>
+              </p>
+              <p className="tool-response inline half no-border">
+                <a href="foo">Website 2 Amet Magna Ullamcorper</a>
               </p>
               <p className="tool-response inline half">
-                <a href="foo">Website 2</a>
-              </p>
-              <p className="tool-response inline half">
-                <a href="foo">Website 3</a>
+                <a href="foo">Website 3 Euismod Vestibulum Fermentum Risus</a>
               </p>
               <p className="tool-response half ">
-                <a href="foo">Website 4</a>
+                <a href="foo">Website 4 Venenatis Ultricies Vestibulum</a>
               </p>
             </Disclosure.Panel>
             {/* </Transition> */}

@@ -1,69 +1,76 @@
+:root {
+  --padding: 20px 0px;
+  --border-thin: 2px solid var(--accent-color);
+  --border-thick: 6px solid var(--accent-color);
+}
+
 .tool-question {
   background-color: transparent;
 
-  font-family: 'Helvetica Neue';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 29px;
-  text-align: left;
+  font-size: var(--font-size-heading);
+  line-height: var(--line-height-heading);
+  text-align: start;
 
-  color: #1a0c26;
+  color: var(--text-primary-color);
 
   width: 100%;
   margin: 0;
-  padding: 20px 5px;
+  padding: var(--padding);
 
   border: 0;
-  border-bottom: 2px solid #ef4136;
+  border-bottom: var(--border-thin);
 }
 
 .tool-response {
   background-color: transparent;
 
-  font-family: 'Helvetica Neue';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  text-align: left;
+  font-size: var(--font-size-standard);
+  line-height: var(--line-height-standard);
+  text-align: start;
 
-  color: #1a0c26;
+  color: --text-primary-color;
 
   width: 100%;
   margin: 0;
-  padding: 20px 5px;
+  padding: var(--padding);
 
   border: 0;
-  border-bottom: 2px solid #ef4136;
+  border-bottom: var(--border-thin);
 }
 
 .tool-question:hover,
 .tool-response:hover {
-  background-color: #d8c7e6;
+  background-color: var(--hover-color);
 }
 
 .tool-response:last-of-type {
-  border-bottom: 6px solid #ef4136;
+  border-bottom: var(--border-thick);
 }
 
 .tool-response:last-of-type.inline {
   border: 0;
-  border-bottom: 2px solid #ef4136;
-}
-.tool-response.no-border {
-  border: 0;
+  border-bottom: var(--border-thin);
 }
 
 .tool-response.half {
   display: inline-flex;
-  width: calc(50% - 10px);
+  /* width: calc(50% - var(--small-unit)); */
+  /* width: calc(50%); */
+  min-height: var(--quarter-module);
+  width: var(--half-module);
 }
-.tool-response.half:last-of-type {
-  display: inline-flex;
-  width: calc(50% - 10px);
-  border-bottom: 2px solid #ef4136;
+.tool-response.half:nth-of-type(odd) {
+  padding-right: var(--small-unit);
+  /* background-color: red; */
+}
+.tool-response.half:nth-of-type(even) {
+  padding-right: 0;
+}
+
+.tool-response.half:nth-last-of-type(2),
+.tool-response.half:nth-last-of-type(1) {
+  /* display: inline-flex; */
+  border-bottom: var(--border-thin);
 }
 
 .tool-response > a {
