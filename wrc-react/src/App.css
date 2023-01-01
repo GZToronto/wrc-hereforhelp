@@ -26,7 +26,9 @@
 
   --small-unit: 10px;
   --large-unit: 20px;
-  --full-module: calc(var(--tool-width) - calc(9 * var(--small-unit)));
+  --full-module: calc(
+    var(--tool-width) - var(--small-unit) - calc(2 * var(--large-unit))
+  );
   --half-module: calc(var(--full-module) / 2);
   --quarter-module: calc(var(--half-module) / 2);
 
@@ -108,14 +110,14 @@ p {
 }
 
 #wrc .tool-container {
-  margin: var(--large-unit);
+  /* margin: var(--large-unit); */
   padding: var(--large-unit);
 
   overflow: hidden;
 
   background-color: var(--bg-offset-color);
 
-  /* border: 1px solid var(--text-primary-color); */
+  /* border: 1px inset var(--accent-color); */
   border-radius: var(--border-radius-large);
 }
 
