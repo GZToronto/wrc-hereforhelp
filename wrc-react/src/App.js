@@ -14,7 +14,7 @@ function App() {
         </h1>
         <div>
           <div className="TBD">
-            <div className="toggle">TBD EMPLOYER/EMPLOYEE toggle</div>
+            <div className="toggle">TBD EMPLOYER / EMPLOYEE toggle</div>
           </div>
           <div className="tool-container">
             {/* <h2>How can we help</h2> */}
