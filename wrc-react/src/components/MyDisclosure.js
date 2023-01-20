@@ -1,12 +1,22 @@
 // import { Disclosure, Transition } from '@headlessui/react'
 import { Disclosure } from '@headlessui/react'
 
+// assets
+import arrow from '../images/arrow.svg'
+
 // styles
 import './MyDisclosure.css'
 
 function MyDisclosure() {
   return (
     <>
+      <h2>Guided Pathway</h2>
+      {/* <hr /> */}
+      <p className="pathway-header">
+        The climate, culture, and/or conduct in my workplace is concerning and I
+        want help.
+      </p>
+
       {/*  */}
       {/*  */}
       {/*  */}
@@ -14,6 +24,7 @@ function MyDisclosure() {
       <Disclosure>
         <Disclosure.Button className="tool-question">
           Help me make sense of what happened
+          <img src={arrow} className="tool-question-arrow" alt="" />
         </Disclosure.Button>
         {/* <Transition
         enter="transition duration-500 ease-out"
@@ -93,6 +104,7 @@ function MyDisclosure() {
       <Disclosure>
         <Disclosure.Button className="tool-question">
           Help me make sense of my employment rights
+          <img src={arrow} className="tool-question-arrow" alt="" />
         </Disclosure.Button>
         {/* <Transition
         enter="transition duration-500 ease-out"
@@ -190,6 +202,7 @@ function MyDisclosure() {
       <Disclosure>
         <Disclosure.Button className="tool-question">
           Help me make sense of my legal options
+          <img src={arrow} className="tool-question-arrow" alt="" />
         </Disclosure.Button>
         {/* <Transition
         enter="transition duration-500 ease-out"
