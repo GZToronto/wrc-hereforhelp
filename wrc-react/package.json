@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^7.0.0",
     "@headlessui/react": "^0.0.0-insiders.865bd57",
     "@heroicons/react": "^2.0.13",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "craco-plugin-scoped-css": "^1.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -38,6 +40,7 @@
     ]
   },
   "devDependencies": {
+    "craco-plugin-single-spa-application": "^2.0.1",
     "gulp": "^4.0.2",
     "gulp-inline-source": "^4.0.0",
     "gulp-replace": "^1.1.4"

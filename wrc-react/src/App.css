@@ -7,13 +7,22 @@
   --bg-primary-color: var(--primary-color);
   --offset-color: hsl(60, 86%, 97%);
   --bg-offset-color: var(--offset-color);
-  --hover-color: hsl(4, 85%, 97.5%);
+  /* --hover-color: hsl(4, 85%, 97.5%); */
+  /* --hover-color: var(--light-purple); */
+  --hover-color: transparent;
   --accent-color: hsl(4, 85%, 57%);
 
   --headline-white: var(--offset-color);
   --bold-purple: hsl(267, 52%, 49%);
+  --dark-purple: hsla(267, 52%, 24%, 1);
+  --light-purple: hsla(267, 52%, 90%, 1);
+  --question-divider: var(--light-purple);
   --bold-red: var(--accent-color);
   --border-color: hsl(240, 2%, 20%);
+  --black: #000000;
+
+  --purple-shadow: 0.4rem 0.4rem 0 var(--bold-purple);
+  --purple-shadow-dark: 0.8rem 0.8rem 0 var(--dark-purple);
 
   /* font-family: 'FranklinGothic URW';
 font-style: normal;
@@ -65,6 +74,7 @@ text-transform: uppercase; */
   /* --tool-width: 490px; */
   --tool-width: 40vw;
   --padding: 20px 0px;
+  --padding-tool-row: 16px 0px;
 
   --small-unit: 10px;
   --large-unit: 20px;
@@ -74,9 +84,9 @@ text-transform: uppercase; */
   --half-module: calc(50% - calc(var(--small-unit) / 2));
   --quarter-module: calc(var(--half-module) / 2);
 
-  --border-thin: 2px solid var(--border-color);
+  --border-small: 2px solid var(--border-color);
   --border-medium: 3px solid var(--border-color);
-  --border-thick: 6px solid var(--border-color);
+  --border-large: 6px solid var(--border-color);
 
   /* Figma spec */
   /* --border-radius-large: 24px; */
@@ -202,7 +212,8 @@ p {
   .tool-container {
     /* width: 88.88888vw !important; */
     /* background-color: blue !important; */
-    width: fill-available !important;
+    /* width: fill-available !important; */
+    width: stretch !important;
   }
 
   .TBD {
@@ -247,6 +258,8 @@ p {
 
   /* border: 1px inset var(--accent-color); */
   border-radius: var(--border-radius-large);
+
+  box-shadow: var(--purple-shadow-dark);
 }
 
 #wrc .tool-container h2 {
@@ -261,6 +274,76 @@ p {
   /* border-bottom: 6px solid hsl(4, 85%, 57%); */
 }
 
+.no-borders,
 #wrc .no-border {
   border: 0;
+  border-top: unset !important;
+  border-bottom: unset !important;
+  border-left: unset !important;
+  border-right: unset !important;
+  border: unset !important;
+}
+
+.no-hover:hover {
+  background-color: unset !important;
+}
+
+/* BEGIN STYLING FOR REST OF SITE */
+/* this is a hyper-specific selector to thicken up the HR in the hero section */
+#block-yui_3_17_2_1_1672599819625_101818 > div > hr {
+  height: 4px;
+  border: none;
+  color: #333335;
+  background-color: #333335;
+}
+
+/* box-shadow on contact cards and tools */
+.resources-contact-card,
+.sqs-block.html-block.sqs-block-html.sqs-background-enabled {
+  box-shadow: var(--purple-shadow);
+}
+
+/* fakes the HR that we can't add inside the squarespace block item */
+.sqs-block.html-block.sqs-block-html.sqs-background-enabled
+  > .sqs-block-content
+  > p:nth-last-of-type(4) {
+  border-bottom: 2px solid #ef4136;
+  padding-bottom: 1.5rem;
+}
+
+/* controls spacing of individual bubble-buttons */
+.sqs-block.html-block.sqs-block-html.sqs-background-enabled
+  > .sqs-block-content
+  > p:nth-last-of-type(3),
+.sqs-block.html-block.sqs-block-html.sqs-background-enabled
+  > .sqs-block-content
+  > p:nth-last-of-type(2),
+.sqs-block.html-block.sqs-block-html.sqs-background-enabled
+  > .sqs-block-content
+  > p:last-of-type {
+  padding-top: 1.5rem;
+}
+
+/* adds border around bubble-buttons as long as they've been set to bold-italic */
+.sqs-block.html-block.sqs-block-html.sqs-background-enabled
+  > .sqs-block-content
+  > p
+  > strong
+  > em {
+  border: 2px solid #f7f5e8;
+  border-radius: 1000px;
+  /* padding: 12px 20px; */
+  padding: calc(1em / 2) calc(1.666em / 2);
+  font-style: unset;
+}
+
+a.btn.btn--border.theme-btn--primary-inverse.sqs-button-element--primary {
+  background-color: hsla(240, 3%, 21%, 1);
+  position: fixed;
+  height: 1.25rem;
+  right: -3rem;
+  top: 12.5rem;
+  rotate: -90deg;
+  font-size: 1.25rem !important;
+  border-radius: 020px 20px 0px 00px;
 }
