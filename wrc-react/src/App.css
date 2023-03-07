@@ -197,7 +197,7 @@ p {
     margin-bottom: 6vmin !important;
   }
 
-  h1.pathway {
+  #wrc h1.pathway {
     padding: 0;
     margin: 0;
     width: var(--tool-width) !important;
