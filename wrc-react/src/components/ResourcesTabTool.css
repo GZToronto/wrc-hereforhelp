@@ -1,0 +1,134 @@
+/* TABS */
+#resources button[role='tab'] {
+  box-sizing: border-box;
+
+  padding: 12px 20px;
+  margin-right: 1rem;
+  margin-bottom: .9rem;
+  gap: 10px;
+
+  min-width: 12.25rem;
+  min-height: 3rem;
+
+  background-color: unset;
+  border: 2px solid #2c5234;
+  border-radius: 100rem;
+}
+
+#resources button[role='tab']:first-of-type {
+  margin-top: 1.25rem;
+}
+#resources button[role='tab']:last-of-type {
+  margin-bottom: 1.25rem;
+}
+
+
+#resources button[role='tab'] > span {
+  /* color: #fefef2; */
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+#resources button[role='tab'][data-headlessui-state='selected'] {
+  background-color: #2c5234;
+  border: 2px solid #a07400;
+}
+#resources button[role='tab'][data-headlessui-state='selected'] > span {
+  color: #fefef2;
+}
+
+/* TAB CONTENT */
+#resources div[role='tabpanel'] {
+  padding-top: 1.25rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+#resources div.tab.contact-card {
+  background-color: hsla(60, 35%, 89%, 1);
+  box-sizing: border-box;
+  max-width: calc(33% - 1rem);
+  /* height: 100%; */
+
+  padding: 40px 32px 40px 32px;
+  border-radius: 24px 24px 24px 24px;
+  box-shadow: 0.4rem 0.4rem 0 #2c5234;
+}
+
+/* Medium devices (tablets, 768px and below) */
+@media (max-width: 928px) {
+#resources div.tab.contact-card {
+  max-width: calc(50% - .75rem);
+  align-items: stretch;
+}}
+/* Medium devices (tablets, 768px and below) */
+@media (max-width: 428px) {
+#resources div.tab.contact-card {
+  max-width: calc(100% - .25rem);
+  align-items: stretch;
+}}
+
+
+
+#resources hr {
+  border: 1.5px solid #8fd6bd;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#resources p.org {
+  font-weight: 900;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+#resources p.org-description {
+  margin-top: 0.75rem;
+}
+
+#resources p.phone,
+#resources p.web,
+#resources p.email {
+  display: inline-block;
+  box-sizing: border-box;
+
+  padding: 12px 20px;
+  margin: 0.5rem 0;
+  margin-right: 1rem;
+  /* gap: 10px; */
+
+  /* min-width: 12.25rem; */
+  min-height: 3rem;
+
+  background-color: unset;
+  border: 2px solid #2c5234;
+  border-radius: 100rem;
+
+  color: #333335;
+  font-weight: 200;
+  /* font-size: 1.25rem; */
+}
+
+#resources p.phone a,
+#resources p.web a,
+#resources p.email a {
+  color: #333335;
+  text-decoration: none;
+}
+
+#resources p.phone:hover:has(a),
+#resources p.web:hover:has(a),
+#resources p.email:hover:has(a) {
+  background-color: #2c5234;
+  text-decoration: none;
+}
+#resources p.phone:hover a,
+#resources p.web:hover a,
+#resources p.email:hover a {
+  background-color: #2c5234;
+  text-decoration: none;
+  color: #fefef2;
+}

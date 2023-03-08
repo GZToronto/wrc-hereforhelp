@@ -4,6 +4,19 @@ import './index.css'
 import App from './App'
 // import reportWebVitals from './reportWebVitals'
 
+var nearest
+const tool = document.getElementById('wrcTool')
+// var nearest = tool.closest('.fluid-engine').className.substring(13)
+if (tool.closest('.fluid-engine') !== null || undefined) {
+  // console.log(tool.closest('.fluid-engine'))
+  nearest = tool
+    .closest('.fluid-engine')
+    .classList.add('squarespace-platform-width-override')
+  console.log(nearest)
+} else {
+  console.log('foo')
+}
+
 const root = ReactDOM.createRoot(document.getElementById('wrcTool'))
 root.render(
   <React.StrictMode>

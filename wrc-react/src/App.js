@@ -1,21 +1,9 @@
 // components
-import MyDisclosure from './components/MyDisclosure'
+import DecisionTreeTool from './components/DecisionTreeTool'
 
 // styles
 import './App.css'
-
-// const json =
-//   'https://smilodon-violin-sppr.squarespace.com/help/?format=json-pretty'
-
-// async function getJson(source) {
-//   try {
-//     let response = await fetch(source)
-//     let responseJson = await response.json()
-//     return responseJson.movies
-//   } catch (error) {
-//     console.error(error)
-//   }
-// }
+import ResourcesTabTool from './components/ResourcesTabTool'
 
 // const DisplayChoices = (choice) => {
 //   console.log(choice)
@@ -23,26 +11,37 @@ import './App.css'
 
 function App() {
   return (
-    <div className="app-body">
-      <header id="wrc" className="app-header">
-        <h1 className="pathway">
-          Sexual harassment is any unwelcome conduct, comment, gesture, or
-          contact that is gender-related or sexual in nature that makes the
-          recipient feel uncomfortable, unsafe, offended, or humiliated, whether
-          intended or not.
-        </h1>
-        <div>
-          {/* <div className="TBD">
-            <div className="toggle">TBD EMPLOYER / EMPLOYEE toggle</div>
-          </div> */}
-          <div className="tool-container">
-            {/* <h2>How can we help</h2> */}
-            <MyDisclosure />
-            {/* {DisplayChoices(getJson(json))} */}
+    <>
+      <div className="app-body">
+        <section id="wrc" className="app-header pathway">
+          <h1 className="pathway">
+            Sexual harassment is any unwelcome conduct, comment, gesture, or
+            contact that is gender-related or sexual in nature that makes the
+            recipient feel uncomfortable, unsafe, offended, or humiliated,
+            whether intended or not.
+          </h1>
+          <div>
+            <div className="tool-container">
+              <DecisionTreeTool />
+            </div>
           </div>
-        </div>
-      </header>
-    </div>
+        </section>
+      </div>
+      <div className="resources-tabs">
+        <section id="resources" className="app-header ">
+          <h4>Resources</h4>
+          <h1 className="pathway">
+            Morbi tellus sem, tempor eget neque et, ullamcorper condimentum
+            ligula
+          </h1>
+          <div>
+            <div className="tool-container">
+              <ResourcesTabTool />
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   )
 }
 
