@@ -235,6 +235,48 @@ export const DecisionTree = () => {
     }))
   }
 
+  const ShowHeader = () => {
+    console.group()
+    console.log('len: ')
+    console.log(state.choices.length)
+    console.groupEnd()
+
+    if (state.choices.length === 0) {
+      return (
+        <>
+          {/* LEAD QUESTION */}
+          <p className="pathway-header">
+            The climate, culture, and/or conduct in my workplace is concerning
+            and I want help.
+          </p>
+        </>
+      )
+    } else {
+      return (
+        <>
+          {/* LEAD QUESTION */}
+          <p className="pathway-header small-text">
+            The climate, culture, and/or conduct in my workplace is concerning
+            and I want help.
+          </p>
+        </>
+      )
+    }
+
+    // for (var i = 0, l = state.choices.length; i < l - 1; i++) {
+    //   // console.group()
+    //   // console.log('previousItems')
+    //   // console.log(state.choices[i - 1])
+    //   // console.groupEnd()
+
+    //   previousArray.push(state.choices[i - 1])
+
+    //   // return <p className="choice previous highlight">{state.choices}</p>
+    //   // var obj = data.messages[i]
+    //   // ...
+    // }
+  }
+
   const PreviousChoices = () => {
     var previousArray = []
 
@@ -317,6 +359,9 @@ export const DecisionTree = () => {
             </p>
           </>
         ))} */}
+
+        {/* LEADING QUESTION */}
+        <ShowHeader />
 
         {/* PREVIOUS CHOICES */}
         <PreviousChoices />
@@ -406,6 +451,9 @@ export const DecisionTree = () => {
 
   return (
     <div>
+      {/* LEADING QUESTION */}
+      <ShowHeader />
+
       {/* PREVIOUS CHOICES */}
       <PreviousChoices />
 

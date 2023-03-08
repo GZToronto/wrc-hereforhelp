@@ -100,8 +100,8 @@ text-transform: uppercase; */
 
   --border-small: 2px solid var(--border-color);
   --border-medium: 3px solid var(--border-color);
-  --border-large: 6px solid var(--border-color);
-  --border-large-pxonly: 6px;
+  --border-large: 8px solid var(--border-color);
+  --border-large-pxonly: 8px;
 
   /* Figma spec */
   /* --border-radius-large: 24px; */
@@ -203,7 +203,11 @@ p {
   background-color: var(--resources-background);
   display: flex;
   justify-content: center;
-  padding: var(--large-unit);
+}
+
+.resources-tabs,
+.app-body {
+  padding: 8vw 4vw;
 }
 
 #resources {

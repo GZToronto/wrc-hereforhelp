@@ -4,7 +4,7 @@
 
   padding: 12px 20px;
   margin-right: 1rem;
-  margin-bottom: .9rem;
+  margin-bottom: 0.9rem;
   gap: 10px;
 
   min-width: 12.25rem;
@@ -21,7 +21,6 @@
 #resources button[role='tab']:last-of-type {
   margin-bottom: 1.25rem;
 }
-
 
 #resources button[role='tab'] > span {
   /* color: #fefef2; */
@@ -62,23 +61,27 @@
 
 /* Medium devices (tablets, 768px and below) */
 @media (max-width: 928px) {
-#resources div.tab.contact-card {
-  max-width: calc(50% - .75rem);
-  align-items: stretch;
-}}
+  #resources div.tab.contact-card {
+    max-width: calc(50% - 0.75rem);
+    align-items: stretch;
+  }
+}
 /* Medium devices (tablets, 768px and below) */
 @media (max-width: 428px) {
-#resources div.tab.contact-card {
-  max-width: calc(100% - .25rem);
-  align-items: stretch;
-}}
-
-
+  #resources div.tab.contact-card {
+    max-width: calc(100% - 0.25rem);
+    align-items: stretch;
+  }
+}
 
 #resources hr {
-  border: 1.5px solid #8fd6bd;
+  border: 1.5px solid #a07400;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
 }
 
 #resources p.org {
@@ -104,7 +107,7 @@
   /* min-width: 12.25rem; */
   min-height: 3rem;
 
-  background-color: unset;
+  background-color: #addc91;
   border: 2px solid #2c5234;
   border-radius: 100rem;
 
