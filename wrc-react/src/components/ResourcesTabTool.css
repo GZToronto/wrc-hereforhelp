@@ -25,6 +25,7 @@
 
 #resources button[role='tab'] > span {
   /* color: #fefef2; */
+  color: #333335;
 
   font-style: normal;
   font-weight: 400;
