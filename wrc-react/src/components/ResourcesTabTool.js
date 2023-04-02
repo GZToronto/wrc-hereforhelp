@@ -129,13 +129,18 @@ function ResourcesTabTool() {
                 l’Alberta
               </p>
               <p className="org-description">
-                The AJEFA's mission is to facilitate access to judicial services
+                {/* The AJEFA's mission is to facilitate access to judicial services
                 in French and to promote the use of French in the administration
                 of justice in Alberta. AJEFA develops and coordinates public
                 legal education and information programs, promotes the use of
                 French within the legal system, offers legal information in
                 French and informs the general public of their rights to access
-                legal services in the language of their choice.
+                legal services in the language of their choice. */}
+                The AJEFA's mission is to facilitate access to judicial services
+                in French in Alberta. AJEFA operates the Alberta Legal
+                Information Centre in Calgary and Edmonton that offers free
+                legal information (not advice), public notary and referral
+                services in French and in English.
               </p>
               <hr />
               <p className="phone">
