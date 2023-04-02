@@ -347,6 +347,7 @@ export const DecisionTree = () => {
     // breadcrumbs: [null],
     choices: [],
     previousQuestion: null,
+    showRestart: false,
   })
 
   const clearState = () => {
@@ -356,6 +357,7 @@ export const DecisionTree = () => {
       previousChoices: [],
       breadcrumbs: [],
       choices: [],
+      showRestart: false,
     }))
   }
 
@@ -370,11 +372,22 @@ export const DecisionTree = () => {
       currentQuestion: prevState.currentQuestion.options[option],
       previousChoices: option,
       previousQuestion: prevState,
+      showRestart: true,
       // ! prev
       // choices: {
       //   ...prevState.choices,
       //   [prevState.currentQuestion.question]: option,
       // },
+      // three: prevState.previousQuestion,
+      // four: prevState.three,
+      // five: prevState.four,
+      // six: prevState.five,
+      // seven: prevState.six,
+      // eight: prevState.seven,
+      // nine: prevState.eight,
+      // ten: prevState.nine,
+      // eleven: prevState.ten,
+      // twelve: prevState.eleven,
 
       choices: [...prevState.choices, option],
       // choices: [...prevState.choices],
@@ -473,42 +486,299 @@ export const DecisionTree = () => {
     return (
       <>
         {state.choices[i - 12] && (
-          <p className="choice previous">{state.choices[i - 12]}</p>
+          <p className="choice previous">
+            <span
+              onClick={
+                // () => console.log(state)
+                () =>
+                  setState((state) => ({
+                    ...state,
+                    currentQuestion:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .currentQuestion,
+                    previousQuestion:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion,
+                    choices:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .choices,
+                  }))
+              }
+            >
+              {state.choices[i - 12]}
+            </span>
+          </p>
         )}
         {state.choices[i - 11] && (
-          <p className="choice previous">{state.choices[i - 11]}</p>
+          <p className="choice previous">
+            <span
+              onClick={
+                // () => console.log(state)
+                () =>
+                  setState((state) => ({
+                    ...state,
+                    currentQuestion:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.currentQuestion,
+                    previousQuestion:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion,
+                    choices:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.choices,
+                  }))
+              }
+            >
+              {state.choices[i - 11]}
+            </span>
+          </p>
         )}
         {state.choices[i - 10] && (
-          <p className="choice previous">{state.choices[i - 10]}</p>
+          <p className="choice previous">
+            <span
+              onClick={
+                // () => console.log(state)
+                () =>
+                  setState((state) => ({
+                    ...state,
+                    currentQuestion:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.currentQuestion,
+                    previousQuestion:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion,
+                    choices:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.choices,
+                  }))
+              }
+            >
+              {state.choices[i - 10]}
+            </span>
+          </p>
         )}
         {state.choices[i - 9] && (
-          <p className="choice previous">{state.choices[i - 9]}</p>
+          <p className="choice previous">
+            <span
+              onClick={
+                // () => console.log(state)
+                () =>
+                  setState((state) => ({
+                    ...state,
+                    currentQuestion:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .currentQuestion,
+                    previousQuestion:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion,
+                    choices:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .choices,
+                  }))
+              }
+            >
+              {state.choices[i - 9]}
+            </span>
+          </p>
         )}
         {state.choices[i - 8] && (
-          <p className="choice previous">{state.choices[i - 8]}</p>
+          <p className="choice previous">
+            <span
+              onClick={
+                // () => console.log(state)
+                () =>
+                  setState((state) => ({
+                    ...state,
+                    currentQuestion:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.currentQuestion,
+                    previousQuestion:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion,
+                    choices:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.choices,
+                  }))
+              }
+            >
+              {state.choices[i - 8]}
+            </span>
+          </p>
         )}
         {state.choices[i - 7] && (
-          <p className="choice previous">{state.choices[i - 7]}</p>
+          <p className="choice previous">
+            <span
+              onClick={
+                // () => console.log(state)
+                () =>
+                  setState((state) => ({
+                    ...state,
+                    currentQuestion:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.currentQuestion,
+                    previousQuestion:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion,
+                    choices:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.choices,
+                  }))
+              }
+            >
+              {state.choices[i - 7]}
+            </span>
+          </p>
         )}
         {state.choices[i - 6] && (
-          <p className="choice previous">{state.choices[i - 6]}</p>
+          <p className="choice previous">
+            <span
+              onClick={
+                // () => console.log(state)
+                () =>
+                  setState((state) => ({
+                    ...state,
+                    currentQuestion:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .currentQuestion,
+                    previousQuestion:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion,
+                    choices:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion
+                        .choices,
+                  }))
+              }
+            >
+              {state.choices[i - 6]}
+            </span>
+          </p>
         )}
         {state.choices[i - 5] && (
-          <p className="choice previous">{state.choices[i - 5]}</p>
+          <p className="choice previous">
+            <span
+              onClick={
+                // () => console.log(state)
+                () =>
+                  setState((state) => ({
+                    ...state,
+                    currentQuestion:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.currentQuestion,
+                    previousQuestion:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.previousQuestion,
+                    choices:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion.choices,
+                  }))
+              }
+            >
+              {state.choices[i - 5]}
+            </span>
+          </p>
         )}
         {state.choices[i - 4] && (
-          <p className="choice previous">{state.choices[i - 4]}</p>
+          <p className="choice previous">
+            <span
+              onClick={
+                // () => console.log(state)
+                () =>
+                  setState((state) => ({
+                    ...state,
+                    currentQuestion:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.currentQuestion,
+                    previousQuestion:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.previousQuestion,
+                    choices:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion.choices,
+                  }))
+              }
+            >
+              {state.choices[i - 4]}
+            </span>
+          </p>
         )}
         {state.choices[i - 3] && (
           <p className="choice previous">
-            previous 3<br />
-            {state.choices[i - 3]}
+            <span
+              onClick={
+                // () => console.log(state)
+                () =>
+                  setState((state) => ({
+                    ...state,
+                    currentQuestion:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .currentQuestion,
+                    previousQuestion:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .previousQuestion,
+                    choices:
+                      state.previousQuestion.previousQuestion.previousQuestion
+                        .choices,
+                  }))
+              }
+            >
+              {state.choices[i - 3]}
+            </span>
           </p>
         )}
         {state.choices[i - 2] && (
           <p className="choice previous">
-            previous 2<br />
-            {state.choices[i - 2]}
+            <span
+              onClick={
+                // () => console.log(state)
+                () =>
+                  setState((state) => ({
+                    ...state,
+                    currentQuestion:
+                      state.previousQuestion.previousQuestion.currentQuestion,
+                    previousQuestion:
+                      state.previousQuestion.previousQuestion.previousQuestion,
+                    choices: state.previousQuestion.previousQuestion.choices,
+                  }))
+              }
+            >
+              {state.choices[i - 2]}
+            </span>
           </p>
         )}
         {state.choices[i - 1] && (
@@ -602,9 +872,14 @@ export const DecisionTree = () => {
           )}
           {/* REFACTOR */}
           <hr className="final-divider" />
-          <p className="closeButton" onClick={clearState}>
-            Restart
-          </p>
+          {/* {console.log('showRestart: ' + state.showRestart)} */}
+          {state.showRestart === true ? (
+            <p className="closeButton" onClick={clearState}>
+              Restart
+            </p>
+          ) : (
+            <></>
+          )}
         </div>
       )
     }
@@ -666,7 +941,7 @@ export const DecisionTree = () => {
       {/* <p>state-question: {state.currentQuestion.question}</p> */}
       <section>
         {Object.keys(state.currentQuestion.options).map((option) => {
-          console.log('inner option: ' + option)
+          // console.log('inner option: ' + option)
           // console.log(state)
           return (
             <p key={option} className="tool-response">
@@ -675,9 +950,14 @@ export const DecisionTree = () => {
           )
         })}
       </section>
-      <p className="closeButton" onClick={clearState}>
-        Restart
-      </p>
+      {/* {console.log('showRestart: ' + state.showRestart)} */}
+      {state.showRestart === true ? (
+        <p className="closeButton" onClick={clearState}>
+          Restart
+        </p>
+      ) : (
+        <p className="closeButton empty" />
+      )}
     </div>
   )
 }

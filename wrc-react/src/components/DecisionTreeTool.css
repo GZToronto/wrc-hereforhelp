@@ -91,6 +91,11 @@ p.choice.previous {
 
   font-style: italic;
 }
+p.pathway-header.pathway-header.small-text:hover::after,
+p.choice.previous > span:hover::after {
+  /* text-decoration: underline; */
+  content: ' ↑';
+}
 p.choice.current {
   font-size: 1.75rem;
   margin: 0;
@@ -270,10 +275,11 @@ button.tool-response[data-headlessui-state~='open']
   border-right-color: var(--bold-purple);
   border-left-color: var(--bold-purple);
   border-bottom-color: var(--bold-purple);
-  /* background-color: magenta !important; */
 }
 .contact-item > a {
-  color: var(--offset-color);
+  /* color: var(--offset-color); */
+  color: #2c5234;
+
   text-decoration: none;
 }
 
@@ -297,6 +303,19 @@ button.tool-response[data-headlessui-state~='open']
 
   border: 2px solid #1e1e1e;
   border-radius: 1000px;
+}
+.closeButton:hover {
+  color: #fefef0;
+  background-color: #2c5234;
+  border: 2px solid #2c5234;
+}
+.closeButton.empty {
+  /* display: inline-block; */
+  visibility: hidden;
+
+  margin-top: unset;
+  padding: unset;
+  border: unset;
 }
 
 .bullet {
