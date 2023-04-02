@@ -14,12 +14,12 @@ function App() {
     <>
       <div className="app-body">
         <section id="wrc" className="app-header pathway">
-          <h1 className="pathway">
+          {/* <h1 className="pathway">
             Sexual harassment is any unwelcome conduct, comment, gesture, or
             contact that is gender-related or sexual in nature that makes the
             recipient feel uncomfortable, unsafe, offended, or humiliated,
             whether intended or not.
-          </h1>
+          </h1> */}
           <div>
             <div className="tool-container">
               <DecisionTreeTool />

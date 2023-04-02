@@ -1,5 +1,5 @@
 // components
-import { DecisionTree } from './Choices'
+import { DecisionTree } from './Choicesv2'
 
 // styles
 import './DecisionTreeTool.css'

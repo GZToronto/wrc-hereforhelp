@@ -14,7 +14,9 @@ if (tool.closest('.fluid-engine') !== null || undefined) {
     .classList.add('squarespace-platform-width-override')
   console.log(nearest)
 } else {
-  console.log('foo')
+  console.log(
+    'Squarespace interface not detected. Skipping classList addition.'
+  )
 }
 
 const root = ReactDOM.createRoot(document.getElementById('wrcTool'))

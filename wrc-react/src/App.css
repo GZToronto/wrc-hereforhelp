@@ -22,7 +22,8 @@
   /* --bold-purple: hsl(267, 52%, 49%); */
   --bold-purple: hsla(98, 52%, 72%, 1);
   /* --dark-purple: hsla(267, 52%, 24%, 1); */
-  --dark-purple: hsla(133, 30%, 25%, 1);
+  /* --dark-purple: hsla(133, 30%, 25%, 1); */
+  --dark-purple: #addc91;
   --light-purple: hsla(267, 52%, 90%, 1);
   --question-divider: var(--light-purple);
   --bold-red: var(--accent-color);
@@ -82,8 +83,8 @@ text-transform: uppercase; */
 
   /* SIZING */
   /* --tool-width: 490px; */
-  --tool-width: 40vw;
-  --max-tool-width: var(--some-squarespace-variable);
+  --tool-width: 66vw;
+  /* --max-tool-width: var(--some-squarespace-variable); */
   --max-tool-width: 1600px;
 
   --padding: 1.25rem 0px;
@@ -154,7 +155,7 @@ p {
 
 .app-body {
   background-color: var(--dark-purple);
-  min-height: 100vh;
+  /* min-height: 100vh; */
   height: fit-content;
   margin: 0;
   padding: 0;
