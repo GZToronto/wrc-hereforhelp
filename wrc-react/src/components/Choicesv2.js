@@ -1035,6 +1035,26 @@ export const DecisionTree = () => {
           <hr className="final-divider" />
           {/* {console.log('showRestart: ' + state.showRestart)} */}
           {state.showRestart === true ? (
+            <p
+              className="closeButton"
+              onClick={
+                // () => console.log(state.previousQuestion)
+                () =>
+                  setState((state) => ({
+                    ...state,
+                    currentQuestion: state.previousQuestion.currentQuestion,
+                    previousQuestion: state.previousQuestion.previousQuestion,
+                    choices: state.previousQuestion.choices,
+                  }))
+              }
+            >
+              Back
+              {/* {state.choices[-1]} */}
+            </p>
+          ) : (
+            <></>
+          )}
+          {state.showRestart === true ? (
             <p className="closeButton" onClick={clearState}>
               Restart
             </p>
@@ -1112,6 +1132,27 @@ export const DecisionTree = () => {
         })}
       </section>
       {/* {console.log('showRestart: ' + state.showRestart)} */}
+      {state.showRestart === true ? (
+        <p
+          className="closeButton"
+          onClick={
+            // () => console.log(state.previousQuestion)
+            () =>
+              setState((state) => ({
+                ...state,
+                currentQuestion: state.previousQuestion.currentQuestion,
+                previousQuestion: state.previousQuestion.previousQuestion,
+                choices: state.previousQuestion.choices,
+              }))
+          }
+        >
+          {/* {console.log(state)} */}
+          {/* {state.choices[0]} */}
+          Back
+        </p>
+      ) : (
+        <></>
+      )}
       {state.showRestart === true ? (
         <p className="closeButton" onClick={clearState}>
           Restart
