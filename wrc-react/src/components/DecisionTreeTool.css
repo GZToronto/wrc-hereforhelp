@@ -86,8 +86,8 @@ p.choice.previous {
 
   border: 0;
   border-bottom: var(--border-small);
-  /* border-bottom-color: var(--bold-purple); */
-  border-bottom-color: #333;
+  border-bottom-color: var(--bold-purple);
+  /* border-bottom-color: #333; */
 
   font-style: italic;
 }
@@ -289,6 +289,11 @@ button.tool-response[data-headlessui-state~='open']
 .organization.description {
   font-weight: unset;
   padding-bottom: 2rem;
+}
+.organization.two {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: var(--border-small);
 }
 
 .closeButton {
