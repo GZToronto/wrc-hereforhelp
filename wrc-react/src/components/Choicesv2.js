@@ -186,10 +186,8 @@ const decisionTree = {
     'I may have experienced sexual harassment.': {
       options: {
         'Did it happen at work?': {
-          // question:
-          // 'I’d like to connect with someone to help me make sense of what happened.',
           options: {
-            Yes: {
+            'Yes ': {
               options: {
                 "I'd like to contact the Workers' Resource Centre": {
                   result: {
@@ -242,7 +240,7 @@ const decisionTree = {
                 },
               },
             },
-            No: {
+            'No ': {
               result: {
                 prefix: 'Call or text',
                 organization: "Alberta's One Line for Sexual Violence",
