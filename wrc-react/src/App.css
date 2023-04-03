@@ -83,9 +83,9 @@ text-transform: uppercase; */
 
   /* SIZING */
   /* --tool-width: 490px; */
-  --tool-width: 66vw;
+  --tool-width: 55vw;
   /* --max-tool-width: var(--some-squarespace-variable); */
-  --max-tool-width: 1600px;
+  --max-tool-width: 1200px;
 
   --padding: 1.25rem 0px;
   --padding-tool-row: 1rem 0;
@@ -185,7 +185,8 @@ p {
   justify-self: center;
 
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
+  flex-direction: column;
   gap: 2.8125rem;
   align-items: center;
   height: fit-content;
@@ -210,7 +211,13 @@ p {
 .app-body {
   padding: 8vw 4vw;
 }
-
+#wrc,
+#wrc > h1.pathway {
+  color: var(--resources-header) !important;
+  width: 100%;
+  max-width: var(--max-tool-width);
+  margin-bottom: unset;
+}
 #resources {
   /* width: var(--tool-width); */
   color: var(--resources-header);
@@ -249,9 +256,6 @@ p {
     display: flex;
     gap: var(--small-unit);
     flex-direction: column !important;
-    /* background-color: magenta; */
-    /* height: 100vh; */
-    /* margin: 6vw; */
     margin-top: 6vmin !important;
     margin-bottom: 8vmin !important;
   }
@@ -260,13 +264,14 @@ p {
   #resources > h1.pathway {
     padding: 0;
     margin: 0;
-    max-width: var(--tool-width) !important;
+    /* max-width: var(--tool-width) !important; */
     font-size: 2em !important;
   }
 
   .app-header > div {
     width: var(--tool-width) !important;
     align-self: center !important;
+    max-width: var(--max-tool-width);
   }
 
   .tool-container {
@@ -291,7 +296,7 @@ p {
 }
 
 #wrc > h1.pathway {
-  width: var(--tool-width);
+  /* width: var(--tool-width); */
 }
 
 #wrc > h1.pathway,
@@ -309,6 +314,7 @@ p {
   margin-bottom: 1rem;
 }
 
+#wrc > h4,
 #resources > h4 {
   text-transform: uppercase;
   color: var(--resources-bronze);
@@ -333,6 +339,7 @@ p {
 #wrc .tool-container {
   width: var(--tool-width);
   padding: var(--large-unit);
+  max-width: var(--max-tool-width);
 
   overflow: hidden;
 
