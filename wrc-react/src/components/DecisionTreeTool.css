@@ -73,11 +73,17 @@ img.tool-question-arrow:hover {
   color: magenta !important;
 }
 
-.select,
-.select:hover {
+.tool-question.select,
+.tool-question.select:hover {
   background-color: unset;
   border-top: var(--border-small);
   border-top-color: transparent;
+
+  /* adjusted size downward at Adam's request */
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  font-size: calc(var(--font-size-standard) * 0.85);
+  line-height: calc(var(--line-height-standard) * 0.85);
 }
 
 p.choice.previous {
