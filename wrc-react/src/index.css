@@ -16,7 +16,7 @@ body {
   background-color: var(--bold-purple);
 }
 
-code {
+#wrc code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
