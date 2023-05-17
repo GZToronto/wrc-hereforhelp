@@ -17,23 +17,31 @@
   --resources-background: hsla(60, 86%, 97%, 1);
   --resources-header: #333333;
   --resources-bronze: hsla(43, 100%, 31%, 1);
+  --resources-border: #333335;
+  --resources-tab-border: #355326;
+  --resources-shadow: #5b514d;
 
   --headline-white: var(--offset-color);
+  --slate-green: #7c9982;
+  --slate-light: hsl(132, 12%, 64%);
+  --resources-rule: var(--slate-green);
   /* --bold-purple: hsl(267, 52%, 49%); */
-  --bold-purple: hsla(98, 52%, 72%, 1);
+  /* --bold-purple: hsla(98, 52%, 72%, 1); */
   /* --dark-purple: hsla(267, 52%, 24%, 1); */
   /* --dark-purple: hsla(133, 30%, 25%, 1); */
-  --dark-purple: #addc91;
+  /* --dark-purple: #addc91; */
+
+  --light-salmon: #e7caa9;
   --light-purple: hsla(267, 52%, 90%, 1);
   --question-divider: var(--light-purple);
   --bold-red: var(--accent-color);
-  /* --border-color: hsl(240, 2%, 20%); */
-  --border-color: var(--bold-purple);
+  --border-color: var(--slate-green);
   --black: #1e1e1e;
 
-  --purple-shadow: 0.4rem 0.4rem 0 var(--bold-purple);
-  /* --purple-shadow-dark: 0.8rem 0.8rem 0 var(--dark-purple); */
-  --purple-shadow-dark: 0.8rem 0.8rem 0 hsla(44, 100%, 31%, 1);
+  --purple-shadow: 0.4rem 0.4rem 0 var(--slate-green);
+  /* --container-shadow-dark: 0.8rem 0.8rem 0 var(--light-salmon); */
+  /* --container-shadow-dark: 0.8rem 0.8rem 0 hsla(44, 100%, 31%, 1); */
+  --container-shadow-dark: 0.8rem 0.8rem 0 #5c514d;
 
   /* font-family: 'FranklinGothic URW';
 font-style: normal;
@@ -90,6 +98,7 @@ text-transform: uppercase; */
   --padding: 1.25rem 0px;
   --padding-tool-row: 1rem 0;
   --padding-bubble: 0.75rem 1rem;
+  --padding-tool-large: 2rem 0;
 
   --small-unit: 10px;
   --large-unit: 20px;
@@ -143,6 +152,71 @@ p {
   font-size: 0.8625rem;
 }
 
+#wrc h1.pathway {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+#wrc p.sqsrte-large {
+  margin-top: -1rem;
+  padding-top: 0;
+  font-size: calc((2.3 - 1) * calc(0.012 * min(100vh, 900px)) + 0.625rem);
+}
+
+.wavy {
+  text-decoration-style: wavy !important;
+  text-decoration-thickness: 0.125rem !important;
+}
+.dot {
+  text-decoration-style: dotted !important;
+  text-decoration-thickness: 0.25rem !important;
+}
+.tooltip {
+  position: relative; /* making the .tooltip span a container for the tooltip text */
+  font-style: inherit;
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
+  font-weight: var(--font-weight-500);
+  text-decoration: underline;
+  text-decoration-color: var(--slate-light);
+  text-underline-offset: 0.5rem !important;
+  text-decoration-thickness: 0.125rem;
+}
+.tooltip:before {
+  content: attr(data-text); /* here's the magic */
+  position: absolute;
+
+  /* vertically center */
+  top: 50%;
+  transform: translateY(-25%);
+
+  /* move to right */
+  left: 100%;
+  margin-left: 15px; /* and add a small left margin */
+
+  /* basic styles */
+  width: 20rem;
+  padding: 2rem;
+  background: #fefef1;
+  color: #1e1e1e;
+  font-style: oblique;
+
+  border-radius: 1rem;
+  border: 1px solid #7c9982;
+
+  display: none; /* hide by default */
+}
+.tooltip:hover:before {
+  display: block;
+  font-size: calc((2.3 - 1) * calc(0.012 * min(100vh, 900px)) + 0.5rem);
+  line-height: 145%;
+}
+.tooltip:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--slate-green);
+  position: relative;
+  content: 'test';
+  z-index: 10;
+}
+
 /* .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -154,7 +228,7 @@ p {
 } */
 
 .app-body {
-  background-color: var(--dark-purple);
+  background-color: var(--light-salmon);
   /* min-height: 100vh; */
   height: fit-content;
   margin: 0;
@@ -207,14 +281,17 @@ p {
   justify-content: center;
 }
 
+/* module padding */
 .resources-tabs,
 .app-body {
-  padding: 8vw 4vw;
+  /* padding: 8vw 4vw; */
+  padding: 4vmin 4vmin 8vmin 4vmin;
 }
 #wrc,
 #wrc > h1.pathway {
   color: var(--resources-header) !important;
-  width: 100%;
+  width: var(--tool-width);
+  /* width: 100%; */
   max-width: var(--max-tool-width);
   margin-bottom: unset;
 }
@@ -256,8 +333,8 @@ p {
     display: flex;
     gap: var(--small-unit);
     flex-direction: column !important;
-    margin-top: 6vmin !important;
-    margin-bottom: 8vmin !important;
+    margin-top: 2.5vmin !important;
+    margin-bottom: 2.5vmin !important;
   }
 
   #wrc > h1.pathway,
@@ -268,20 +345,20 @@ p {
     font-size: 2em !important;
   }
 
-  .app-header > div {
+  #wrc .app-header > div {
     width: var(--tool-width) !important;
     align-self: center !important;
     max-width: var(--max-tool-width);
   }
 
-  .tool-container {
+  #wrc .tool-container {
     /* width: 88.88888vw !important; */
     /* background-color: blue !important; */
     /* width: fill-available !important; */
     width: stretch !important;
   }
 
-  .TBD {
+  #wrc .TBD {
     justify-content: center;
   }
 }
@@ -348,7 +425,7 @@ p {
   /* border: 1px inset var(--accent-color); */
   border-radius: var(--border-radius-large);
 
-  box-shadow: var(--purple-shadow-dark);
+  box-shadow: var(--container-shadow-dark);
 }
 
 #wrc .tool-container h2 {
@@ -427,7 +504,9 @@ p {
 }
 
 a.btn.btn--border.theme-btn--primary-inverse.sqs-button-element--primary {
-  background-color: hsla(240, 3%, 21%, 1);
+  /* background-color: hsla(240, 3%, 21%, 1); */
+  /* background-color: #355326; */
+  background-color: #355326 !important;
   position: fixed;
   height: 1.25rem;
   right: -3rem;
@@ -435,4 +514,20 @@ a.btn.btn--border.theme-btn--primary-inverse.sqs-button-element--primary {
   rotate: -90deg;
   font-size: 1.25rem !important;
   border-radius: 020px 20px 0px 00px;
+}
+
+.reduce-padding {
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.intro-text {
+  color: var(--resources-header) !important;
+}
+
+a.tooltip {
+  /* position: relative; */
+  /* display: inline-block; */
+  /* border-bottom: 1px dotted black; */
+  color: unset;
 }

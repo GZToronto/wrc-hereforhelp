@@ -10,25 +10,40 @@ import ResourcesTabTool from './components/ResourcesTabTool'
 // }
 
 function App() {
+  const harassmentDefinition =
+    'Sexual Harassment is unwanted, often coercive, sexual behaviour directed by one person towards another.'
+
   return (
     <>
       <div className="app-body">
         <section id="wrc" className="app-header">
-          <div>
-            <div className="tool-container">
-              <DecisionTreeTool />
-            </div>
-          </div>
           <h1 className="pathway">
             {/* Sexual harassment is any unwelcome conduct, comment, gesture, or
             contact that is gender-related or sexual in nature that makes the
             recipient feel uncomfortable, unsafe, offended, or humiliated,
             whether intended or not. */}
+            <a
+              className="tooltip dot"
+              href="https://aasas.ca/about-sexual-violence/sexual-harassment/
+"
+            >
+              <em className="tooltip dot" data-text={harassmentDefinition}>
+                Sexual harassment
+              </em>
+            </a>{' '}
+            can take many forms.{' '}
+          </h1>
+          <p className="sqsrte-large reduce-padding intro-text">
             We have created this tool for you to click through. It will help you
             find the information you are looking for and can connect you to
-            someone who understands. If you aren’t ready to chat, you can find
-            websites to browse down below.
-          </h1>
+            someone who understands.
+            <p className="leadin">Not sure what you need? </p>
+          </p>
+          <div>
+            <div className="tool-container">
+              <DecisionTreeTool />
+            </div>
+          </div>
         </section>
       </div>
       <div className="resources-tabs">

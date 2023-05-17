@@ -19,7 +19,7 @@ function ResourcesTabTool() {
             <span>Employment Rights</span>
           </Tab>
           <Tab>
-            <span>Manage My Case</span>
+            <span>File a Complaint</span>
           </Tab>
         </Tab.List>
         <Tab.Panels>
@@ -41,7 +41,10 @@ function ResourcesTabTool() {
             <div className="tab contact-card">
               <p className="org">Workers’ Resource Centre</p>
               <p className="org-description">
-                Lorem ipsum description placeholder dolor sit amet.
+                The WRC is an employment and human rights advocacy agency that
+                provides casework support, public legal education, and support
+                with workplace sexual harassment issues. We serve all of Alberta
+                and our services are <em>free</em>.
               </p>
               <hr />
               <p className="phone">
@@ -180,7 +183,10 @@ function ResourcesTabTool() {
             <div className="tab contact-card">
               <p className="org">Workers’ Resource Centre</p>
               <p className="org-description">
-                Lorem ipsum description placeholder dolor sit amet.
+                The WRC is an employment and human rights advocacy agency that
+                provides casework support, public legal education, and support
+                with workplace sexual harassment issues. We serve all of Alberta
+                and our services are <em>free</em>.
               </p>
               <hr />
               <p className="phone">
@@ -220,7 +226,10 @@ function ResourcesTabTool() {
             <div className="tab contact-card">
               <p className="org">Workers’ Resource Centre</p>
               <p className="org-description">
-                Lorem ipsum description placeholder dolor sit amet.
+                The WRC is an employment and human rights advocacy agency that
+                provides casework support, public legal education, and support
+                with workplace sexual harassment issues. We serve all of Alberta
+                and our services are <em>free</em>.
               </p>
               <hr />
               <p className="phone">

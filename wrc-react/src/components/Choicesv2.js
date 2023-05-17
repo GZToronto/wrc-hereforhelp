@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
+import AnimateHeight from 'react-animate-height'
 
 let arrow =
   'https://images.squarespace-cdn.com/content/6356d348273dcd0e61254e5c/56ceef9e-84fc-4f75-9be3-043c77826a0b/chevron%404x.png?content-type=image%2Fpng'
+
+const br = '%0D%0A'
 
 const decisionTree = {
   options: {
@@ -185,65 +188,40 @@ const decisionTree = {
     // },
     'I may have experienced sexual harassment.': {
       options: {
-        'Did it happen at work?': {
+        'It happened at work.': {
           options: {
-            'Yes ': {
-              options: {
-                "I'd like to contact the Workers' Resource Centre": {
-                  result: {
-                    organization: "Workers' Resource Centre",
-                    description:
-                      'organization blurb detail lorem ipsum dolor sit amet placeholder.',
-                    online: [null, null],
-                    // 'quinn@helpwrc.org?subject=Test email!&body=Email body content TBD.',
-                    email: 'quinn@helpwrc.org',
-                    emailSubject: 'Test email',
-                    emailBody: 'Email body content TBD.',
-                    phone: '587-374-5326',
-                  },
-                },
-                'I want to know who I can tell.': {
-                  result: {
-                    organization: "Workers' Resource Centre",
-                    description:
-                      'organization blurb detail lorem ipsum dolor sit amet placeholder.',
-                    online: [null, null],
-                    email: 'quinn@helpwrc.org',
-                    emailSubject: 'Test email',
-                    emailBody: 'Email body content TBD.',
-                    phone: '587-374-5326',
-                  },
-                },
-                'I want to chat with someone who believes me.': {
-                  result: {
-                    prefix: 'Call or text',
-                    organization: "Alberta's One Line for Sexual Violence",
-                    description: `<p>Alberta’s One Line for Sexual Violence is a toll-free talk, text, and chat service that provides emotional support, information, and referral to anyone who has experienced or been impacted by sexual violence.</p>
-                <p>One Line can provide support in the moment while also connecting Albertans to the nearest sexual assault centre for access to specialized services for individuals, families and communities across the province.</p>
-                <p>Support is available seven days a week, with access to interpretation services in over 200 languages.</p>`,
-                    online: [null, null],
-                    email: null,
-                    phone: '1-866-403-8000',
-                  },
-                },
-                'I am looking for court support.': {
-                  result: {
-                    prefix: 'Call or text',
-                    organization: "Alberta's One Line for Sexual Violence",
-                    description: `<p>Alberta’s One Line for Sexual Violence is a toll-free talk, text, and chat service that provides emotional support, information, and referral to anyone who has experienced or been impacted by sexual violence.</p>
-                <p>One Line can provide support in the moment while also connecting Albertans to the nearest sexual assault centre for access to specialized services for individuals, families and communities across the province.</p>
-                <p>Support is available seven days a week, with access to interpretation services in over 200 languages.</p>`,
-                    online: [null, null],
-                    email: null,
-                    phone: '1-866-403-8000',
-                  },
-                },
+            // "I'd like to contact the Workers' Resource Centre": {
+            //   result: {
+            //     organization: "Workers' Resource Centre",
+            //     description:
+            //       'organization blurb detail lorem ipsum dolor sit amet placeholder.',
+            //     online: [null, null],
+            //     // 'quinn@helpwrc.org?subject=Test email!&body=Email body content TBD.',
+            //     email: 'quinn@helpwrc.org',
+            //     emailSubject: 'Test email',
+            //     emailBody: 'Email body content TBD.',
+            //     phone: '587-374-5326',
+            //   },
+            // },
+            'I want to know who I can tell.': {
+              result: {
+                organization: "Workers' Resource Centre",
+                orgGA4: 'WRC',
+                description:
+                  'The WRC is an employment and human rights advocacy agency that provides casework support, public legal education, and support with workplace sexual harassment issues. We serve all of Alberta and our services are <em>free</em>.',
+                online: [null, null],
+                email: 'quinn@helpwrc.org',
+                emailSubject:
+                  '#hereforhelp - Website inquiry: Sexual harassment at work',
+                emailBody: `Hi,${br}${br}I want to learn more about sexual harassment employment rights and if I can file a claim or complaint.`,
+                phone: '587-374-5326',
               },
             },
-            'No ': {
+            'I want to chat with someone who believes me.': {
               result: {
                 prefix: 'Call or text',
                 organization: "Alberta's One Line for Sexual Violence",
+                orgGA4: 'OneLine',
                 description: `<p>Alberta’s One Line for Sexual Violence is a toll-free talk, text, and chat service that provides emotional support, information, and referral to anyone who has experienced or been impacted by sexual violence.</p>
                 <p>One Line can provide support in the moment while also connecting Albertans to the nearest sexual assault centre for access to specialized services for individuals, families and communities across the province.</p>
                 <p>Support is available seven days a week, with access to interpretation services in over 200 languages.</p>`,
@@ -252,6 +230,32 @@ const decisionTree = {
                 phone: '1-866-403-8000',
               },
             },
+            'I am looking for court support.': {
+              result: {
+                prefix: 'Call or text',
+                organization: "Alberta's One Line for Sexual Violence",
+                orgGA4: 'OneLine',
+                description: `<p>Alberta’s One Line for Sexual Violence is a toll-free talk, text, and chat service that provides emotional support, information, and referral to anyone who has experienced or been impacted by sexual violence.</p>
+                <p>One Line can provide support in the moment while also connecting Albertans to the nearest sexual assault centre for access to specialized services for individuals, families and communities across the province.</p>
+                <p>Support is available seven days a week, with access to interpretation services in over 200 languages.</p>`,
+                online: [null, null],
+                email: null,
+                phone: '1-866-403-8000',
+              },
+            },
+          },
+        },
+        "It didn't happen at work.": {
+          result: {
+            prefix: 'Call or text',
+            organization: "Alberta's One Line for Sexual Violence",
+            orgGA4: 'OneLine',
+            description: `<p>Alberta’s One Line for Sexual Violence is a toll-free talk, text, and chat service that provides emotional support, information, and referral to anyone who has experienced or been impacted by sexual violence.</p>
+                <p>One Line can provide support in the moment while also connecting Albertans to the nearest sexual assault centre for access to specialized services for individuals, families and communities across the province.</p>
+                <p>Support is available seven days a week, with access to interpretation services in over 200 languages.</p>`,
+            online: [null, null],
+            email: null,
+            phone: '1-866-403-8000',
           },
         },
       },
@@ -261,37 +265,43 @@ const decisionTree = {
         'Who can I tell?': {
           result: {
             organization: "Workers' Resource Centre",
+            orgGA4: 'WRC',
             description:
-              'organization blurb detail lorem ipsum dolor sit amet placeholder.',
+              'The WRC is an employment and human rights advocacy agency that provides casework support, public legal education, and support with workplace sexual harassment issues. We serve all of Alberta and our services are <em>free</em>.',
             online: [null, null],
             email: 'quinn@helpwrc.org',
-            emailSubject: 'Test email',
-            emailBody: 'Email body content TBD.',
+            emailSubject:
+              '#hereforhelp - Website inquiry: Sexual harassment at work',
+            emailBody: `Hi,${br}${br}I want to learn more about sexual harassment employment rights and if I can file a claim or complaint.`,
             phone: '587-374-5326',
           },
         },
         'I want to learn how my workplace can be safer': {
           result: {
-            organization: "Workers' Resource Centre",
+            organization: 'Moments Matter',
+            orgGA4: 'MomentsMatter',
             description:
-              'organization blurb detail lorem ipsum dolor sit amet placeholder.',
+              'Positive, respectful work cultures boost personal well-being, team success, and job performance. They also stop sexual harassment.',
             online: [null, null],
-            email: 'quinn@helpwrc.org',
-            emailSubject: 'Test email',
-            emailBody: 'Email body content TBD.',
-            phone: '587-374-5326',
+            email: 'sbrown@aasas.ca',
+            emailSubject:
+              '#hereforhelp - Website inquiry: I want to learn how my workplace can be safer',
+            emailBody: `Hi,${br}${br}I want to learn more about how my workplace can be safer when it comes to sexual harassment.`,
+            phone: '403-237-6905, 268',
           },
         },
         'I am on the leadership team at my workplace': {
           result: {
-            organization: "Workers' Resource Centre",
+            organization: 'Moments Matter',
+            orgGA4: 'MomentsMatter',
             description:
-              'organization blurb detail lorem ipsum dolor sit amet placeholder.',
+              'Positive, respectful work cultures boost personal well-being, team success, and job performance. They also stop sexual harassment.',
             online: [null, null],
-            email: 'quinn@helpwrc.org',
-            emailSubject: 'Test email',
-            emailBody: 'Email body content TBD.',
-            phone: '587-374-5326',
+            email: 'sbrown@aasas.ca',
+            emailSubject:
+              '#hereforhelp - Website inquiry: I want to learn how my workplace can be safer',
+            emailBody: `Hi,${br}${br}I am on the leadership team at my workplace, and I want to learn how to make my workplace safe from sexual harassment.`,
+            phone: '403-237-6905, 268',
           },
         },
       },
@@ -301,8 +311,10 @@ const decisionTree = {
         'I want online resources': {
           result: {
             organization: 'Alberta Civil Liberties Research Centre (ACLRC)',
-            description:
-              'organization blurb detail lorem ipsum dolor sit amet placeholder.',
+            orgGA4: 'ACLRC',
+            description: `Our mission is to promote respect for civil liberties and human
+                rights in Alberta through research and education to contribute
+                to a more just and inclusive community.`,
             online: [
               'aclrc.com',
               'https://www.aclrc.com/sexual-harrasmt-in-workplace',
@@ -311,8 +323,9 @@ const decisionTree = {
             phone: null,
 
             organization2: 'Centre for Public Legal Education',
+            orgGA4: 'CPLEA',
             description2:
-              'organization blurb detail lorem ipsum dolor sit amet placeholder.',
+              'Find more information about sexual harassment and the law by clicking the link below',
             online2: ['cplea.ca', 'https://www.cplea.ca/bullying-harassment/'],
             email2: null,
             phone2: null,
@@ -320,59 +333,51 @@ const decisionTree = {
         },
         'I want to book training for my workplace.': {
           result: {
-            organization: 'Moments Matter',
+            organization:
+              'Engagement strategies toward ending workplace sexual harassment.',
+            orgGA4: 'AASAS',
             description:
-              'Engagement strategies toward ending workplace sexual harassment .',
+              'Our unique curriculum is built with best practices for adult online learning and is proven to build the skills that help people understand, respond to, and prevent sexual harassment.',
             online: [
-              'momentsmatter.info',
-              'https://momentsmatter.info/training',
+              'aasas.ca',
+              'https://aasas.ca/training/engagement-strategies-toward-ending-workplace-sexual-harassment/',
             ],
-            email: 'lorem-ipsum@momentsmatter.info',
-            emailSubject: 'Test email',
-            emailBody: 'Email body content TBD.',
-            phone: null,
+            email: 'sbrown@aasas.ca',
+            emailSubject:
+              '#hereforhelp - Website inquiry: Engagement strategies toward ending workplace sexual harassment.',
+            emailBody: `Hi,${br}${br}I want to learn more about the training you offer.`,
+            phone: '403-237-6905, 268',
           },
         },
       },
     },
     'I am helping someone who experienced sexual harassment.': {
+      // options: {
+      // 'Did it happen at work?': {
+      // question:
+      // 'I’d like to connect with someone to help me make sense of what happened.',
       options: {
-        'Did it happen at work?': {
-          // question:
-          // 'I’d like to connect with someone to help me make sense of what happened.',
+        'It happened at work.': {
           options: {
-            Yes: {
-              options: {
-                'I want to know more about what our options are.': {
-                  result: {
-                    organization: "Workers' Resource Centre",
-                    description:
-                      'organization blurb detail lorem ipsum dolor sit amet placeholder.',
-                    online: [null, null],
-                    email: 'quinn@helpwrc.org',
-                    emailSubject: 'Test email',
-                    emailBody: 'Email body content TBD.',
-                    phone: '587-374-5326',
-                  },
-                },
-                'I want to chat with someone who understands.': {
-                  result: {
-                    prefix: 'Call or text',
-                    organization: "Alberta's One Line for Sexual Violence",
-                    description: `<p>Alberta’s One Line for Sexual Violence is a toll-free talk, text, and chat service that provides emotional support, information, and referral to anyone who has experienced or been impacted by sexual violence.</p>
-                <p>One Line can provide support in the moment while also connecting Albertans to the nearest sexual assault centre for access to specialized services for individuals, families and communities across the province.</p>
-                <p>Support is available seven days a week, with access to interpretation services in over 200 languages.</p>`,
-                    online: [null, null],
-                    email: null,
-                    phone: '1-866-403-8000',
-                  },
-                },
+            'I want to know more about what our options are.': {
+              result: {
+                organization: "Workers' Resource Centre",
+                orgGA4: 'WRC',
+                description:
+                  'The WRC is an employment and human rights advocacy agency that provides casework support, public legal education, and support with workplace sexual harassment issues. We serve all of Alberta and our services are <em>free</em>.',
+                online: [null, null],
+                email: 'quinn@helpwrc.org',
+                emailSubject:
+                  '#hereforhelp - Website inquiry: Sexual harassment at work',
+                emailBody: `Hi,${br}${br}I want to learn more about sexual harassment employment rights and if I can file a claim or complaint.`,
+                phone: '587-374-5326',
               },
             },
-            No: {
+            'I want to chat with someone who understands.': {
               result: {
                 prefix: 'Call or text',
                 organization: "Alberta's One Line for Sexual Violence",
+                orgGA4: 'OneLine',
                 description: `<p>Alberta’s One Line for Sexual Violence is a toll-free talk, text, and chat service that provides emotional support, information, and referral to anyone who has experienced or been impacted by sexual violence.</p>
                 <p>One Line can provide support in the moment while also connecting Albertans to the nearest sexual assault centre for access to specialized services for individuals, families and communities across the province.</p>
                 <p>Support is available seven days a week, with access to interpretation services in over 200 languages.</p>`,
@@ -383,31 +388,50 @@ const decisionTree = {
             },
           },
         },
+        "It didn't happen at work.": {
+          result: {
+            prefix: 'Call or text',
+            organization: "Alberta's One Line for Sexual Violence",
+            orgGA4: 'OneLine',
+            description: `<p>Alberta’s One Line for Sexual Violence is a toll-free talk, text, and chat service that provides emotional support, information, and referral to anyone who has experienced or been impacted by sexual violence.</p>
+                <p>One Line can provide support in the moment while also connecting Albertans to the nearest sexual assault centre for access to specialized services for individuals, families and communities across the province.</p>
+                <p>Support is available seven days a week, with access to interpretation services in over 200 languages.</p>`,
+            // https://aasas.ca/get-support/
+            online: [null, null],
+            email: null,
+            phone: '1-866-403-8000',
+          },
+        },
       },
+      // },
+      // },
     },
     'Is sexual harassment illegal?': {
       options: {
         'Can I file a human rights complaint?': {
           result: {
             organization: "Workers' Resource Centre",
+            orgGA4: 'WRC',
             description:
-              'organization blurb detail lorem ipsum dolor sit amet placeholder.',
+              'The WRC is an employment and human rights advocacy agency that provides casework support, public legal education, and support with workplace sexual harassment issues. We serve all of Alberta and our services are <em>free</em>.',
             online: [null, null],
             email: 'quinn@helpwrc.org',
-            emailSubject: 'Test email',
-            emailBody: 'Email body content TBD.',
+            emailSubject:
+              '#hereforhelp - Website inquiry: Is sexual harassment illegal?',
+            emailBody: `Hi,${br}${br}I want to learn more about sexual harassment employment rights and if I can file a claim or complaint.`,
             phone: '587-374-5326',
           },
         },
         'I would like more information.': {
           result: {
             organization: 'Centre for Public Legal Education',
+            orgGA4: 'CPLEA',
             description:
-              'organization blurb detail lorem ipsum dolor sit amet placeholder.',
+              'Find more information about sexual harassment and the law by clicking the link below.',
             online: ['cplea.ca', 'https://www.cplea.ca/bullying-harassment/'],
-            email: 'info@cplea.ca',
-            emailSubject: 'Test email',
-            emailBody: 'Email body content TBD.',
+            email: null,
+            emailSubject: null,
+            emailBody: null,
             phone: null,
           },
         },
@@ -419,9 +443,9 @@ const decisionTree = {
       result: {
         organization:
           "Association des juristes d'expression française de l'Alberta",
-        description:
-          'organization blurb detail lorem ipsum dolor sit amet placeholder.',
-        online: [null, null],
+        orgGA4: 'AJEFA',
+        description: `Situé à La Cité francophone d'Edmonton et à Guinness House à Calgary, le Centre assure des services gratuits et confidentiels d'information juridique, d'orientation et d'accompagnement aux personnes faisant face à un problème d'ordre juridique. Depuis 2022, des services sont aussi disponibles sur demande à Calgary.`,
+        online: ['infojuri.ca', 'https://infojuri.ca/fr/'],
         email: 'question@infojuri.ca',
         phone: null,
         // },
@@ -439,7 +463,10 @@ export const DecisionTree = () => {
     choices: [],
     previousQuestion: null,
     showRestart: false,
+    hasBegun: false,
   })
+
+  const [height, setHeight] = useState('auto')
 
   const clearState = () => {
     setState(() => ({
@@ -449,6 +476,17 @@ export const DecisionTree = () => {
       breadcrumbs: [],
       choices: [],
       showRestart: false,
+      hasBegun: false,
+    }))
+  }
+
+  const handleBegin = () => {
+    // setHeight(height === 0 ? 'auto' : 0)
+    // setHeight('auto')
+
+    setState((state) => ({
+      ...state,
+      hasBegun: true,
     }))
   }
 
@@ -458,11 +496,13 @@ export const DecisionTree = () => {
     // console.log(option)
     console.log(state)
     console.groupEnd()
+    // setHeight(height === 0 ? 'auto' : 0)
 
     setState((prevState) => ({
       currentQuestion: prevState.currentQuestion.options[option],
       previousChoices: option,
       previousQuestion: prevState,
+      hasBegun: true,
       showRestart: true,
       // ! prev
       // choices: {
@@ -532,10 +572,10 @@ export const DecisionTree = () => {
       return (
         <>
           {/* LEAD QUESTION */}
-          <p className="pathway-header small-text" onClick={clearState}>
+          {/* <p className="pathway-header small-text" onClick={clearState}>
             The climate, culture, and/or conduct in my workplace is concerning
             and I want help.
-          </p>
+          </p> */}
         </>
       )
     }
@@ -925,7 +965,7 @@ export const DecisionTree = () => {
           {/* LEADING QUESTION */}
           <ShowHeader />
           {/* PREVIOUS CHOICES */}
-          <PreviousChoices />
+          {/* <PreviousChoices /> */}
           {/* CURRENT CHOICE */}
           <p className="choice current">
             {state.choices[state.choices.length - 1]}
@@ -947,7 +987,12 @@ export const DecisionTree = () => {
             />
           )}
           {state.currentQuestion.result.online[0] && (
-            <p className="contact-item web">
+            // <p className="contact-item web">
+            <p
+              className={
+                'contact-item web' + state.currentQuestion.result.orgGA4
+              }
+            >
               <a href={state.currentQuestion.result.online[1]}>
                 {state.currentQuestion.result.online[0]}
               </a>
@@ -958,7 +1003,12 @@ export const DecisionTree = () => {
           {/* emailSubject: 'Test email', */}
           {/* emailBody: 'Email body content TBD.', */}
           {state.currentQuestion.result.email && (
-            <p className="contact-item email">
+            // <p className="contact-item email">
+            <p
+              className={
+                'contact-item email' + state.currentQuestion.result.orgGA4
+              }
+            >
               <a
                 href={
                   'mailto:' +
@@ -974,7 +1024,12 @@ export const DecisionTree = () => {
             </p>
           )}
           {state.currentQuestion.result.phone && (
-            <p className="contact-item telephone">
+            // <p className="contact-item telephone">
+            <p
+              className={
+                'contact-item telephone' + state.currentQuestion.result.orgGA4
+              }
+            >
               <a href={'tel:' + state.currentQuestion.result.phone}>
                 {state.currentQuestion.result.phone}
               </a>
@@ -1001,7 +1056,12 @@ export const DecisionTree = () => {
           )}
           {state.currentQuestion.result.online2 &&
           state.currentQuestion.result.online2 !== undefined ? (
-            <p className="contact-item web">
+            // <p className="contact-item web">
+            <p
+              className={
+                'contact-item web' + state.currentQuestion.result.orgGA4
+              }
+            >
               <a href={state.currentQuestion.result.online2[1]}>
                 {state.currentQuestion.result.online2[0]}
               </a>
@@ -1011,7 +1071,12 @@ export const DecisionTree = () => {
           )}
           {state.currentQuestion.result.email2 &&
           state.currentQuestion.result.email2 !== undefined ? (
-            <p className="contact-item email">
+            // <p className="contact-item email">
+            <p
+              className={
+                'contact-item email' + state.currentQuestion.result.orgGA4
+              }
+            >
               <a href={'mailto:' + state.currentQuestion.result.email2}>
                 {state.currentQuestion.result.email2}
               </a>
@@ -1021,7 +1086,12 @@ export const DecisionTree = () => {
           )}
           {state.currentQuestion.result.phone2 &&
           state.currentQuestion.result.phone2 !== null ? (
-            <p className="contact-item telephone">
+            // <p className="contact-item telephone">
+            <p
+              className={
+                'contact-item telephone' + state.currentQuestion.result.orgGA4
+              }
+            >
               <a href={'tel:' + state.currentQuestion.result.phone2}>
                 {state.currentQuestion.result.phone2}
               </a>
@@ -1043,6 +1113,7 @@ export const DecisionTree = () => {
                     currentQuestion: state.previousQuestion.currentQuestion,
                     previousQuestion: state.previousQuestion.previousQuestion,
                     choices: state.previousQuestion.choices,
+                    hasBegun: state.previousQuestion.hasBegun,
                   }))
               }
             >
@@ -1101,36 +1172,15 @@ export const DecisionTree = () => {
     <div>
       {/* LEADING QUESTION */}
       <ShowHeader />
-
       {/* PREVIOUS CHOICES */}
-      <PreviousChoices />
-
+      {/* <PreviousChoices /> */}
       {/* CURRENT CHOICE */}
       {state.choices[state.choices.length - 1] && (
         <p className="choice current">
           {state.choices[state.choices.length - 1]}
         </p>
       )}
-
-      <p className="tool-question select">
-        <em>Select one</em>
-        <img src={arrow} className="tool-question-arrow" alt="" />
-      </p>
-      {/* <p>previousChoice: {state.previousChoice}</p> */}
-      {/* <p>state-question: {state.currentQuestion.question}</p> */}
-      <section>
-        {Object.keys(state.currentQuestion.options).map((option) => {
-          // console.log('inner option: ' + option)
-          // console.log(state)
-          return (
-            <p key={option} className="tool-response">
-              <span onClick={() => handleChoice(option)}>{option}</span>
-            </p>
-          )
-        })}
-      </section>
-      {/* {console.log('showRestart: ' + state.showRestart)} */}
-      {state.showRestart === true ? (
+      {state.hasBegun === false ? (
         <p
           className="closeButton"
           onClick={
@@ -1138,25 +1188,72 @@ export const DecisionTree = () => {
             () =>
               setState((state) => ({
                 ...state,
-                currentQuestion: state.previousQuestion.currentQuestion,
-                previousQuestion: state.previousQuestion.previousQuestion,
-                choices: state.previousQuestion.choices,
+                hasBegun: true,
               }))
           }
         >
           {/* {console.log(state)} */}
           {/* {state.choices[0]} */}
-          Back
+          Begin
         </p>
       ) : (
-        <></>
-      )}
-      {state.showRestart === true ? (
-        <p className="closeButton" onClick={clearState}>
-          Restart
-        </p>
-      ) : (
-        <p className="closeButton empty" />
+        <>
+          <p className="tool-question select">
+            <em>Select one</em>
+            <img src={arrow} className="tool-question-arrow" alt="" />
+          </p>
+          {/* <p>previousChoice: {state.previousChoice}</p> */}
+          {/* <p>state-question: {state.currentQuestion.question}</p> */}
+
+          <AnimateHeight
+            id="options-section"
+            duration={300}
+            delay={50}
+            height={height}
+          >
+            <section id="options-container">
+              {Object.keys(state.currentQuestion.options).map((option) => {
+                // console.log('inner option: ' + option)
+                // console.log(state)
+                return (
+                  <p key={option} className="tool-response">
+                    <span onClick={() => handleChoice(option)}>{option}</span>
+                  </p>
+                )
+              })}
+            </section>
+          </AnimateHeight>
+          {/* {console.log('showRestart: ' + state.showRestart)} */}
+          {state.showRestart === true && state.previousQuestion !== null ? (
+            <p
+              className="closeButton"
+              onClick={
+                // () => console.log(state.previousQuestion)
+                () =>
+                  setState((state) => ({
+                    ...state,
+                    currentQuestion: state.previousQuestion.currentQuestion,
+                    previousQuestion: state.previousQuestion.previousQuestion,
+                    choices: state.previousQuestion.choices,
+                    hasBegun: state.previousQuestion.hasBegun,
+                  }))
+              }
+            >
+              {/* {console.log(state)} */}
+              {/* {state.choices[0]} */}
+              Back
+            </p>
+          ) : (
+            <></>
+          )}
+          {state.showRestart === true && state.previousQuestion !== null ? (
+            <p className="closeButton" onClick={clearState}>
+              Restart
+            </p>
+          ) : (
+            <p className="closeButton empty" />
+          )}
+        </>
       )}
     </div>
   )
