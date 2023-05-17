@@ -8,202 +8,11 @@ const br = '%0D%0A'
 
 const decisionTree = {
   options: {
-    // 'Help me make sense of what happened.': {
-    //   options: {
-    //     'I’d like to connect with someone to help me make sense of what happened.': {
-    //       // question:
-    //       // 'I’d like to connect with someone to help me make sense of what happened.',
-    //       options: {
-    //         "Contact the Workers' Resource Centre": {
-    //           result: {
-    //             organization: "Workers' Resource Centre",
-    //             description:
-    //               'organization blurb detail lorem ipsum dolor sit amet placeholder.',
-    //             online: [null, null],
-    //             email: 'quinn@helpwrc.org',
-    //             phone: '587-374-5326',
-    //           },
-    //         },
-    //       },
-    //     },
-    //     'I’d like to review relevant information': {
-    //       // question:
-    //       // 'I’d like to connect with someone to help me make sense of what happened.',
-    //       options: {
-    //         'Contact the Alberta Civil Liberties Research Centre (ACLRC)': {
-    //           result: {
-    //             organization: 'Alberta Civil Liberties Research Centre (ACLRC)',
-    //             description:
-    //               'organization blurb detail lorem ipsum dolor sit amet placeholder.',
-    //             online: ['aclrc.com', 'https://aclrc.com/video-resources'],
-    //             email: null,
-    //             phone: null,
-    //           },
-    //         },
-    //       },
-    //     },
-    //     'I’d like to learn more about what sexual harassment is.': {
-    //       // question:
-    //       // 'I’d like to connect with someone to help me make sense of what happened.',
-    //       options: {
-    //         'Contact the Association of Alberta Sexual Assault Services (AASAS)': {
-    //           result: {
-    //             organization:
-    //               'Association of Alberta Sexual Assault Services (AASAS)',
-    //             description:
-    //               'organization blurb detail lorem ipsum dolor sit amet placeholder.',
-    //             online: [
-    //               'aasas.ca',
-    //               'https://aasas.ca/about-sexual-violence/sexual-harassment/',
-    //             ],
-    //             email: null,
-    //             phone: null,
-    //           },
-    //         },
-    //       },
-    //     },
-    //     'I want to learn how my workplace can be more respectful.': {
-    //       // question:
-    //       // 'I’d like to connect with someone to help me make sense of what happened.',
-    //       options: {
-    //         'Contact the Association of Alberta Sexual Assault Services (AASAS)': {
-    //           result: {
-    //             organization:
-    //               'Association of Alberta Sexual Assault Services (AASAS)',
-    //             description:
-    //               'organization blurb detail lorem ipsum dolor sit amet placeholder.',
-    //             online: ['Moments Matter', 'https://momentsmatter.info'],
-    //             email: null,
-    //             phone: null,
-    //           },
-    //         },
-    //       },
-    //     },
-    //   },
-    // },
-    // 'Help me make sense of my employment rights.': {
-    //   options: {
-    //     'I’d like to connect with someone to help me make sense of my employment rights.': {
-    //       // question:
-    //       // 'I’d like to connect with someone to help me make sense of what happened.',
-    //       options: {
-    //         "Contact the Workers' Resource Centre": {
-    //           result: {
-    //             organization: "Workers' Resource Centre",
-    //             description:
-    //               'organization blurb detail lorem ipsum dolor sit amet placeholder.',
-    //             online: [null, null],
-    //             email: 'info@helpwrc.org',
-    //             phone: '587-374-5326',
-    //           },
-    //         },
-    //       },
-    //     },
-    //     'I’d like to review information about employment rights.': {
-    //       // question:
-    //       // 'I’d like to connect with someone to help me make sense of what happened.',
-    //       options: {
-    //         'Contact the Centre for Public Legal Education': {
-    //           result: {
-    //             organization: 'Centre for Public Legal Education',
-    //             description:
-    //               'organization blurb detail lorem ipsum dolor sit amet placeholder.',
-    //             online: ['cplea.ca', 'https://cplea.ca/work'],
-    //             email: 'info@cplea.ca',
-    //             phone: null,
-    //           },
-    //         },
-    //       },
-    //     },
-    //     'Show me related law and legislation information.': {
-    //       // question:
-    //       // 'I’d like to connect with someone to help me make sense of what happened.',
-    //       options: {
-    //         'Contact the Centre for Public Legal Education': {
-    //           result: {
-    //             organization: 'Centre for Public Legal Education',
-    //             description:
-    //               'organization blurb detail lorem ipsum dolor sit amet placeholder.',
-    //             online: ['cplea.cas', 'https://cplea.ca/bullying-harassment/'],
-    //             email: null,
-    //             phone: null,
-    //           },
-    //         },
-    //         'Contact the Association des juristes d’expression francaise de l’Alberta': {
-    //           result: {
-    //             organization:
-    //               'Association des juristes d’expression francaise de l’Alberta',
-    //             description:
-    //               'organization blurb detail lorem ipsum dolor sit amet placeholder.',
-    //             online: ['ajefa.ca', 'https://ajefa.ca/'],
-    //             email: null,
-    //             phone: null,
-    //           },
-    //         },
-    //         'Contact the Alberta Civil Liberties Research Centre': {
-    //           result: {
-    //             organization: 'Alberta Civil Liberties Research Centre',
-    //             description:
-    //               'organization blurb detail lorem ipsum dolor sit amet placeholder.',
-    //             online: [
-    //               'clrc.com',
-    //               'https://aclrc.com/sexual-harrasmt-in-workplace',
-    //             ],
-    //             email: null,
-    //             phone: null,
-    //           },
-    //         },
-    //       },
-    //     },
-    //     'I’d like to explore filing a human rights complaint.': {
-    //       // question:
-    //       // 'I’d like to connect with someone to help me make sense of what happened.',
-    //       options: {
-    //         'Contact the Workers’ Resource Centre': {
-    //           result: {
-    //             organization: "Workers' Resource Centre",
-    //             description:
-    //               'organization blurb detail lorem ipsum dolor sit amet placeholder.',
-    //             online: ['helpwrc.org', 'https://helpwrc.org'],
-    //             email: null,
-    //             phone: null,
-    //           },
-    //         },
-    //         'Contact the Alberta Civil Liberties Research Centre (ACLRC)': {
-    //           result: {
-    //             organization: 'Alberta Civil Liberties Research Centre (ACLRC)',
-    //             description:
-    //               'organization blurb detail lorem ipsum dolor sit amet placeholder.',
-    //             online: [
-    //               'aclrc.com',
-    //               'https://www.aclrc.com/sexual-harrasmt-in-workplace',
-    //             ],
-    //             email: null,
-    //             phone: null,
-    //           },
-    //         },
-    //       },
-    //     },
-    //   },
-    // },
-    'I may have experienced sexual harassment.': {
+    'I may have experienced sexual harassment': {
       options: {
-        'It happened at work.': {
+        'It happened at work': {
           options: {
-            // "I'd like to contact the Workers' Resource Centre": {
-            //   result: {
-            //     organization: "Workers' Resource Centre",
-            //     description:
-            //       'organization blurb detail lorem ipsum dolor sit amet placeholder.',
-            //     online: [null, null],
-            //     // 'quinn@helpwrc.org?subject=Test email!&body=Email body content TBD.',
-            //     email: 'quinn@helpwrc.org',
-            //     emailSubject: 'Test email',
-            //     emailBody: 'Email body content TBD.',
-            //     phone: '587-374-5326',
-            //   },
-            // },
-            'I want to know who I can tell.': {
+            'I want to know who I can tell': {
               result: {
                 organization: "Workers' Resource Centre",
                 orgGA4: 'WRC',
@@ -217,7 +26,7 @@ const decisionTree = {
                 phone: '587-374-5326',
               },
             },
-            'I want to chat with someone who believes me.': {
+            'I want to chat with someone who believes me': {
               result: {
                 prefix: 'Call or text',
                 organization: "Alberta's One Line for Sexual Violence",
@@ -230,7 +39,7 @@ const decisionTree = {
                 phone: '1-866-403-8000',
               },
             },
-            'I am looking for court support.': {
+            'I am looking for court support': {
               result: {
                 prefix: 'Call or text',
                 organization: "Alberta's One Line for Sexual Violence",
@@ -245,7 +54,7 @@ const decisionTree = {
             },
           },
         },
-        "It didn't happen at work.": {
+        "It didn't happen at work": {
           result: {
             prefix: 'Call or text',
             organization: "Alberta's One Line for Sexual Violence",
@@ -260,7 +69,7 @@ const decisionTree = {
         },
       },
     },
-    'There may be sexual harassment happening at my work.': {
+    'There may be sexual harassment happening at my work': {
       options: {
         'Who can I tell?': {
           result: {
@@ -331,10 +140,10 @@ const decisionTree = {
             phone2: null,
           },
         },
-        'I want to book training for my workplace.': {
+        'I want to book training for my workplace': {
           result: {
             organization:
-              'Engagement strategies toward ending workplace sexual harassment.',
+              'Engagement strategies toward ending workplace sexual harassment',
             orgGA4: 'AASAS',
             description:
               'Our unique curriculum is built with best practices for adult online learning and is proven to build the skills that help people understand, respond to, and prevent sexual harassment.',
@@ -351,15 +160,11 @@ const decisionTree = {
         },
       },
     },
-    'I am helping someone who experienced sexual harassment.': {
-      // options: {
-      // 'Did it happen at work?': {
-      // question:
-      // 'I’d like to connect with someone to help me make sense of what happened.',
+    'I am helping someone who experienced sexual harassment': {
       options: {
-        'It happened at work.': {
+        'It happened at work': {
           options: {
-            'I want to know more about what our options are.': {
+            'I want to know more about what our options are': {
               result: {
                 organization: "Workers' Resource Centre",
                 orgGA4: 'WRC',
@@ -373,7 +178,7 @@ const decisionTree = {
                 phone: '587-374-5326',
               },
             },
-            'I want to chat with someone who understands.': {
+            'I want to chat with someone who understands': {
               result: {
                 prefix: 'Call or text',
                 organization: "Alberta's One Line for Sexual Violence",
@@ -388,7 +193,7 @@ const decisionTree = {
             },
           },
         },
-        "It didn't happen at work.": {
+        "It didn't happen at work": {
           result: {
             prefix: 'Call or text',
             organization: "Alberta's One Line for Sexual Violence",
@@ -403,8 +208,6 @@ const decisionTree = {
           },
         },
       },
-      // },
-      // },
     },
     'Is sexual harassment illegal?': {
       options: {
@@ -422,7 +225,7 @@ const decisionTree = {
             phone: '587-374-5326',
           },
         },
-        'I would like more information.': {
+        'I would like more information': {
           result: {
             organization: 'Centre for Public Legal Education',
             orgGA4: 'CPLEA',
@@ -437,7 +240,7 @@ const decisionTree = {
         },
       },
     },
-    "Besoin d'aide en français en Alberta? Trouvez-nous ici.": {
+    "Besoin d'aide en français en Alberta? Trouvez-nous ici": {
       // options: {
       // 'I want online resources': {
       result: {

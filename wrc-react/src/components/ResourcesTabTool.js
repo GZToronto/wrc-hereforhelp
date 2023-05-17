@@ -24,20 +24,6 @@ function ResourcesTabTool() {
         </Tab.List>
         <Tab.Panels>
           <Tab.Panel>
-            {/* <div className="card">Sexual Harassment</div> */}
-
-            {/* <div className="tab contact-card">
-              <p className="org">Organization Name</p>
-              <p className="org-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                suscipit vel mauris sit sapien et diam amet ultrices.
-              </p>
-              <hr />
-              <p className="phone">1-844-435-7972</p>
-              <p className="email">email@address.com</p>
-              <p className="web">url.org</p>
-            </div> */}
-
             <div className="tab contact-card">
               <p className="org">Workers’ Resource Centre</p>
               <p className="org-description">
