@@ -50,8 +50,9 @@ function App() {
         <section id="resources" className="app-header ">
           <h4>Resources</h4>
           <h1 className="pathway">
-            Placeholder lorem ipsum morbi tellus sem, tempor eget neque et,
-            ullamcorper condimentum ligula.
+            Below you can find a list of Alberta-wide resources that can help.
+            <br />
+            We are here for you.
           </h1>
           <div>
             <div className="tool-container">
