@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import AnimateHeight from 'react-animate-height'
 
+// Survey Items
+import TestSurvey from './Survey'
+
 let arrow =
   'https://images.squarespace-cdn.com/content/6356d348273dcd0e61254e5c/56ceef9e-84fc-4f75-9be3-043c77826a0b/chevron%404x.png?content-type=image%2Fpng'
 
@@ -240,7 +243,7 @@ const decisionTree = {
         },
       },
     },
-    "Besoin d'aide en français en Alberta? Trouvez-nous ici": {
+    "L'AJEFA offre des ressources en français": {
       // options: {
       // 'I want online resources': {
       result: {
@@ -249,7 +252,11 @@ const decisionTree = {
         orgGA4: 'AJEFA',
         description: `Situé à La Cité francophone d'Edmonton et à Guinness House à Calgary, le Centre assure des services gratuits et confidentiels d'information juridique, d'orientation et d'accompagnement aux personnes faisant face à un problème d'ordre juridique. Depuis 2022, des services sont aussi disponibles sur demande à Calgary.`,
         online: ['infojuri.ca', 'https://infojuri.ca/fr/'],
-        email: 'question@infojuri.ca',
+        email:
+          // Question%20sur%20le%20harc%C3%A8lement%20sexuel&body=
+          'question@infojuri.ca',
+        emailSubject: null,
+        emailBody: `Bonjour,${br}${br}Je cherche des ressources en français`,
         phone: null,
         // },
         // },
@@ -267,9 +274,31 @@ export const DecisionTree = () => {
     previousQuestion: null,
     showRestart: false,
     hasBegun: false,
+    hasShownSurvey: false,
   })
 
+  // survey show/hide
+  const [isHide, setIsHide] = useState(true)
+  // const [isHide, setIsHide] = useState(false)
   const [height, setHeight] = useState('auto')
+
+  const showSurvey = () => {
+    console.log('survey state:', state.hasShownSurvey)
+
+    // note: dev test
+    setIsHide(false)
+
+    // note: prod
+    // if (state.hasShownSurvey !== true) {
+    //   setTimeout(() => setIsHide(false), 2000)
+    //   console.log('show survey')
+
+    //   setState((state) => ({
+    //     ...state,
+    //     hasShownSurvey: true,
+    //   }))
+    // }
+  }
 
   const clearState = () => {
     setState(() => ({
@@ -286,6 +315,8 @@ export const DecisionTree = () => {
   const handleBegin = () => {
     // setHeight(height === 0 ? 'auto' : 0)
     // setHeight('auto')
+
+    showSurvey()
 
     setState((state) => ({
       ...state,
@@ -419,6 +450,9 @@ export const DecisionTree = () => {
 
     return (
       <>
+        {!isHide ? <TestSurvey /> : null}
+        <TestSurvey />
+
         {state.choices[i - 12] && (
           <p className="choice previous">
             <span
@@ -983,16 +1017,23 @@ export const DecisionTree = () => {
           {state.choices[state.choices.length - 1]}
         </p>
       )}
+
+      {/* {state.hasBegun === true ? showSurvey() : <></>} */}
+
       {state.hasBegun === false ? (
         <p
           className="closeButton"
           onClick={
             // () => console.log(state.previousQuestion)
-            () =>
+            () => {
               setState((state) => ({
                 ...state,
                 hasBegun: true,
               }))
+              console.log('handleBegin')
+              handleBegin()
+              setIsHide(false)
+            }
           }
         >
           {/* {console.log(state)} */}

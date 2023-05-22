@@ -1,0 +1,83 @@
+#wrc-site-survey {
+  --text-color: blue;
+  /* headlines and buttons */
+  --main-color: red;
+  /* pale green */
+  /* --main-color: #1ab394; */
+  --main-color: var(--slate-green);
+
+  /* --text-color: #404040; */
+  --text-color: var(--black);
+
+  /* --add-button-color: #1948b3;
+  --remove-button-color: #ff1800;
+  --disable-color: #dbdbdb;
+  --progress-text-color: #9d9d9d;
+  --disabled-label-color: rgba(64, 64, 64, 0.5);
+  --slider-color: white;
+  --disabled-slider-color: #cfcfcf;
+  --error-color: #d52901;
+
+  --light-text-color: #fff;
+  --checkmark-color: #fff;
+  --progress-buttons-color: #8dd9ca;
+  --inputs-background-color: transparent;
+  --main-hover-color: #9f9f9f;
+  --body-container-background-color: #f4f4f4;
+  --text-border-color: #d4d4d4;
+  --disabled-text-color: rgba(64, 64, 64, 0.5);
+  --border-color: rgb(64, 64, 64, 0.5);
+  --header-background-color: #e7e7e7;
+  --answer-background-color: rgba(26, 179, 148, 0.2);
+  --error-background-color: rgba(213, 41, 1, 0.2);
+  --radio-checked-color: #404040;
+  --clean-button-color: #1948b3;
+  --body-background-color: #ffffff;
+  --foreground-light: #909090;
+  --font-family: Raleway; */
+  --font-family: var(--font-stack);
+}
+
+#wrc-site-survey div.sv-question__content > div > fieldset {
+  display: grid;
+  justify-content: center;
+}
+#wrc-site-survey
+  div.sv-question__content
+  > div
+  > fieldset
+  > span.sv-rating__min-text {
+  grid-column: 1/6;
+  grid-row: 1;
+}
+#wrc-site-survey
+  div.sv-question__content
+  > div
+  > fieldset
+  > span.sv-rating__max-text {
+  grid-column: 7/12;
+  grid-row: 1;
+  display: inline-flex;
+  justify-content: flex-end;
+}
+#wrc-site-survey div.sv-question__content > div > fieldset > .sv-rating__item {
+  grid-row: 2;
+}
+
+/* SURVEY CONFIRMATION PAGE */
+#wrc-site-survey .sv-completedpage {
+  background-color: unset;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+#wrc-site-survey .sv-completedpage {
+  display: flex;
+  gap: 1rem;
+}
+
+#wrc-site-survey .sv_window {
+  min-width: 33vw !important;
+  max-width: 400px !important;
+}

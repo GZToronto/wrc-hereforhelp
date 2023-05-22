@@ -1,6 +1,10 @@
 // components
 import DecisionTreeTool from './components/DecisionTreeTool'
 
+// Survey Items
+import Survey from './components/Survey'
+import { useState } from 'react'
+
 // styles
 import './App.css'
 import ResourcesTabTool from './components/ResourcesTabTool'
@@ -9,9 +13,18 @@ import ResourcesTabTool from './components/ResourcesTabTool'
 //   console.log(choice)
 // }
 
+const showSurvey = () => {
+  console.log('show survey')
+}
+
 function App() {
   const harassmentDefinition =
     'Sexual Harassment is unwanted, often coercive, sexual behaviour directed by one person towards another.'
+
+  // survey show/hide
+  const [isHide, setIsHide] = useState(true)
+
+  setTimeout(() => setIsHide(false), 10000)
 
   return (
     <>
@@ -22,6 +35,7 @@ function App() {
             contact that is gender-related or sexual in nature that makes the
             recipient feel uncomfortable, unsafe, offended, or humiliated,
             whether intended or not. */}
+            {!isHide ? <Survey /> : null}
             <a
               className="tooltip dot"
               href="https://aasas.ca/about-sexual-violence/sexual-harassment/
@@ -33,11 +47,12 @@ function App() {
             </a>{' '}
             can take many forms.{' '}
           </h1>
+
           <p className="sqsrte-large reduce-padding intro-text">
             We have created this tool for you to click through. It will help you
             find the information you are looking for and can connect you to
             someone who understands.
-            <p className="leadin">Not sure what you need? </p>
+            <span className="leadin">Get started below.</span>
           </p>
           <div>
             <div className="tool-container">

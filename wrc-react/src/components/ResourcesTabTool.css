@@ -36,6 +36,10 @@
 #resources button[role='tab'][aria-selected='true'] {
   background-color: var(--slate-green);
   border: 2px solid var(--resources-border);
+  align-items: center !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  justify-content: center !important;
 }
 /* #resources button[role='tab'][data-headlessui-state='selected'] > span { */
 #resources button[role='tab'][aria-selected='true'] > span {
@@ -153,6 +157,8 @@
 
 #resources button[role='tab']:hover,
 #resources button[role='tab'] > span:hover,
+#resources button[role='tab'][aria-selected='false'],
+#resources button[role='tab'][aria-selected='false']:hover,
 #resources button[role='tab'][aria-selected='true']:hover,
 #resources button[role='tab'][aria-selected='true'] > span:hover {
   cursor: pointer !important;
