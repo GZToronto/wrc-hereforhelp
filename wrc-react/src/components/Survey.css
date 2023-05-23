@@ -1,11 +1,12 @@
 #wrc-site-survey {
   /* --main-color: #1ab394; */
   --main-color: var(--slate-green);
+  --base-unit: 8px;
 
   /* --text-color: #404040; */
   --text-color: var(--black);
 
-  /* --add-button-color: #1948b3;
+  --add-button-color: #1948b3;
   --remove-button-color: #ff1800;
   --disable-color: #dbdbdb;
   --progress-text-color: #9d9d9d;
@@ -30,7 +31,7 @@
   --clean-button-color: #1948b3;
   --body-background-color: #ffffff;
   --foreground-light: #909090;
-  --font-family: Raleway; */
+  --font-family: Raleway;
   --font-family: var(--font-stack);
 }
 
@@ -78,6 +79,9 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
 }
 #wrc-site-survey .sv-rating__min-text {
   margin: 0;
