@@ -135,7 +135,7 @@ const decisionTree = {
             phone: null,
 
             organization2: 'Centre for Public Legal Education',
-            orgGA4: 'CPLEA',
+            orgGA42: 'CPLEA',
             description2:
               'Find more information about sexual harassment and the law by clicking the link below',
             online2: ['cplea.ca', 'https://www.cplea.ca/bullying-harassment/'],
@@ -280,9 +280,11 @@ export const DecisionTree = () => {
   // survey show/hide
   const [isHide, setIsHide] = useState(true)
   // const [isHide, setIsHide] = useState(false)
+  // eslint-disable-next-line no-unused-vars
   const [height, setHeight] = useState('auto')
 
   const showSurvey = () => {
+    console.log('choicesv2.js show survey')
     console.log('survey state:', state.hasShownSurvey)
 
     // note: dev test
@@ -378,6 +380,7 @@ export const DecisionTree = () => {
       console.log('handleChoice: currentQuestion')
       console.log(state.currentQuestion)
       console.log('handleChoice: previousQuestion.currentQuestion')
+      // eslint-disable-next-line no-lone-blocks
       {
         state.previousQuestion &&
           console.log(state.previousQuestion.currentQuestion)
@@ -428,6 +431,7 @@ export const DecisionTree = () => {
     // }
   }
 
+  // eslint-disable-next-line no-unused-vars
   const PreviousChoices = () => {
     var previousArray = []
 
@@ -1030,7 +1034,7 @@ export const DecisionTree = () => {
                 ...state,
                 hasBegun: true,
               }))
-              console.log('handleBegin')
+              console.log('choices: handleBegin and showSurvey')
               handleBegin()
               setIsHide(false)
             }

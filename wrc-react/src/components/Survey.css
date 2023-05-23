@@ -1,8 +1,4 @@
 #wrc-site-survey {
-  --text-color: blue;
-  /* headlines and buttons */
-  --main-color: red;
-  /* pale green */
   /* --main-color: #1ab394; */
   --main-color: var(--slate-green);
 
@@ -38,31 +34,27 @@
   --font-family: var(--font-stack);
 }
 
-#wrc-site-survey div.sv-question__content > div > fieldset {
-  display: grid;
-  justify-content: center;
-}
-#wrc-site-survey
+/* #wrc-site-survey
   div.sv-question__content
   > div
   > fieldset
   > span.sv-rating__min-text {
   grid-column: 1/6;
   grid-row: 1;
-}
+} */
 #wrc-site-survey
   div.sv-question__content
   > div
   > fieldset
   > span.sv-rating__max-text {
-  grid-column: 7/12;
-  grid-row: 1;
+  /* grid-column: 7/12; */
+  /* grid-row: 1; */
   display: inline-flex;
   justify-content: flex-end;
 }
-#wrc-site-survey div.sv-question__content > div > fieldset > .sv-rating__item {
+/* #wrc-site-survey div.sv-question__content > div > fieldset > .sv-rating__item {
   grid-row: 2;
-}
+} */
 
 /* SURVEY CONFIRMATION PAGE */
 #wrc-site-survey .sv-completedpage {
@@ -74,10 +66,51 @@
 
 #wrc-site-survey .sv-completedpage {
   display: flex;
-  gap: 1rem;
+  gap: auto;
 }
 
 #wrc-site-survey .sv_window {
-  min-width: 33vw !important;
-  max-width: 400px !important;
+  min-width: 40vw;
+  width: clamp(40vw, 550px, 90vw) !important;
+}
+
+#wrc-site-survey div.sv-question__content > div > fieldset {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#wrc-site-survey .sv-rating__min-text {
+  margin: 0;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  flex-basis: 50% !important;
+  order: 1 !important;
+}
+#wrc-site-survey .sv-rating__max-text {
+  margin: 0;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  flex-basis: 50% !important;
+  order: 2 !important;
+}
+#wrc-site-survey .sv-rating__item {
+  margin: 0;
+  margin-left: 0 !important;
+  margin-right: 0% !important;
+  padding: 0;
+  /* padding-right: 2%; */
+  flex-basis: 7%;
+  /* box-sizing: content-box; */
+  order: 3 !important;
+}
+
+#wrc-site-survey .sv-rating__item:last-of-type {
+  margin: 0;
+  margin-left: 0 !important;
+  margin-right: 0% !important;
+  padding: 0 !important;
+  gap: unset !important;
+}
+#wrc-site-survey .sv-rating__item:last-of-type > .sv-rating__item-text {
+  margin-right: 0 !important;
 }

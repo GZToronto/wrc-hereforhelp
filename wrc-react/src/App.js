@@ -13,13 +13,9 @@ import ResourcesTabTool from './components/ResourcesTabTool'
 //   console.log(choice)
 // }
 
-const showSurvey = () => {
-  console.log('show survey')
-}
-
 function App() {
   const harassmentDefinition =
-    'Sexual Harassment is unwanted, often coercive, sexual behaviour directed by one person towards another.'
+    'Sexual harassment is unwanted, often coercive, sexual behaviour directed by one person towards another.'
 
   // survey show/hide
   const [isHide, setIsHide] = useState(true)
@@ -66,8 +62,7 @@ function App() {
           <h4>Resources</h4>
           <h1 className="pathway">
             Below you can find a list of Alberta-wide resources that can help.
-            <br />
-            We are here for you.
+            <wbr /> We are here for you.
           </h1>
           <div>
             <div className="tool-container">
