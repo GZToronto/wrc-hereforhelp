@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import AnimateHeight from 'react-animate-height'
+import { Helmet } from 'react-helmet'
 
-// Survey Items
-import TestSurvey from './Survey'
+// OLD Survey Items
+// import TestSurvey from './Survey'
 
 let arrow =
   'https://images.squarespace-cdn.com/content/6356d348273dcd0e61254e5c/56ceef9e-84fc-4f75-9be3-043c77826a0b/chevron%404x.png?content-type=image%2Fpng'
@@ -278,7 +279,7 @@ export const DecisionTree = () => {
   })
 
   // survey show/hide
-  const [isHide, setIsHide] = useState(true)
+  // const [isHide, setIsHide] = useState(true)
   // const [isHide, setIsHide] = useState(false)
   // eslint-disable-next-line no-unused-vars
   const [height, setHeight] = useState('auto')
@@ -288,7 +289,7 @@ export const DecisionTree = () => {
     console.log('survey state:', state.hasShownSurvey)
 
     // note: dev test
-    setIsHide(false)
+    // setIsHide(false)
 
     // note: prod
     // if (state.hasShownSurvey !== true) {
@@ -300,6 +301,93 @@ export const DecisionTree = () => {
     //     hasShownSurvey: true,
     //   }))
     // }
+
+    // You can find the form ID in the URL of this page
+    // https://tally.so/forms/meD6Wo/share
+    // const formId = 'meD6Wo'
+
+    // Open the popup
+    // Tally.openPopup(formId, options)
+
+    // Available options
+    // type PopupOptions = {
+    //   key?: string,
+    //   layout?: 'default' | 'modal',
+    //   width?: number,
+    //   alignLeft?: boolean,
+    //   hideTitle?: boolean,
+    //   overlay?: boolean,
+    //   emoji?: {
+    //     text: string,
+    //     animation:
+    //       | 'none'
+    //       | 'wave'
+    //       | 'tada'
+    //       | 'heart-beat'
+    //       | 'spin'
+    //       | 'flash'
+    //       | 'bounce'
+    //       | 'rubber-band'
+    //       | 'head-shake',
+    //   },
+    //   autoClose?: number,
+    //   showOnce?: boolean,
+    //   doNotShowAfterSubmit?: boolean,
+    //   customFormUrl?: string,
+    //   hiddenFields?: {
+    //     [key: string]: any,
+    //   },
+    //   onOpen?: () => void,
+    //   onClose?: () => void,
+    //   onPageView?: (page: number) => void,
+    //   onSubmit?: (payload: any) => void,
+    // }
+
+    // Example: open a popup with default options
+    // Tally.openPopup('meD6Wo')
+
+    // Example: opening a popup as a centered modal
+    // Tally.openPopup('meD6Wo', {
+    //   layout: 'modal', // Open as a centered modal
+    //   width: 700, // Set the width of the modal
+    //   autoClose: 5000, // Close the popup 5 seconds after form was submitted (in ms)
+    // })
+
+    // Example: set custom hidden fields
+    // Tally.openPopup('meD6Wo', {
+    //   hiddenFields: {
+    //     ref: 'downloads',
+    //     email: 'alice@example.com',
+    //   },
+    // })
+
+    // Example: customization via custom domain URL + code injection
+    // Tally.openPopup('meD6Wo', {
+    //   customFormUrl: 'https://yourdomain.com/form',
+    // })
+
+    // Example: use callback functions to handle events
+    // Tally.openPopup('meD6Wo', {
+    //   onOpen: () => {
+    //     // The popup was opened, mark the form as seen
+    //     // ...
+    //   },
+    //   onClose: () => {
+    //     // The popup was closed
+    //     // ...
+    //   },
+    //   onPageView: (page: number) => {
+    //     // Log the page view
+    //     // ...
+    //   },
+    //   onSubmit: (payload: any) => {
+    //     // Form was submitted, use the answers payload in your application
+    //     // ...
+    //   },
+    // })
+
+    // Close the popup
+    // Tally.closePopup('meD6Wo')
   }
 
   const clearState = () => {
@@ -454,8 +542,8 @@ export const DecisionTree = () => {
 
     return (
       <>
-        {!isHide ? <TestSurvey /> : null}
-        <TestSurvey />
+        {/* {!isHide ? <TestSurvey /> : null} */}
+        {/* <TestSurvey /> */}
 
         {state.choices[i - 12] && (
           <p className="choice previous">
@@ -1011,6 +1099,11 @@ export const DecisionTree = () => {
 
   return (
     <div>
+      {/* <Helmet>
+        <title>My Title</title>
+        <script src="https://tally.so/widgets/embed.js"></script>
+      </Helmet> */}
+
       {/* LEADING QUESTION */}
       <ShowHeader />
       {/* PREVIOUS CHOICES */}
@@ -1036,7 +1129,8 @@ export const DecisionTree = () => {
               }))
               console.log('choices: handleBegin and showSurvey')
               handleBegin()
-              setIsHide(false)
+              showSurvey()
+              // setIsHide(false)
             }
           }
         >

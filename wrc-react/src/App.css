@@ -18,7 +18,8 @@
   --resources-header: #333333;
   --resources-bronze: hsla(43, 100%, 31%, 1);
   --resources-border: #333335;
-  --resources-tab-border: #355326;
+  /* --resources-tab-border: #355326; */
+  --resources-tab-border: #3c522c;
   --resources-shadow: #5b514d;
 
   --headline-white: var(--offset-color);
@@ -506,7 +507,7 @@ p {
 a.btn.btn--border.theme-btn--primary-inverse.sqs-button-element--primary {
   /* background-color: hsla(240, 3%, 21%, 1); */
   /* background-color: #355326; */
-  background-color: #355326 !important;
+  background-color: #3c522c !important;
   position: fixed;
   height: 1.25rem;
   right: -3rem;
@@ -530,4 +531,19 @@ a.tooltip {
   /* display: inline-block; */
   /* border-bottom: 1px dotted black; */
   color: unset;
+}
+
+.leadin {
+  display: block;
+  margin-top: 0.8625rem;
+  /* font-size: 1.25rem; */
+  /* line-height: 1.5rem; */
+  /* font-weight: 500; */
+  /* color: var(--resources-header) !important; */
+}
+
+div.tally - app > main > section > form > div > div > div > a > div,
+.tally-powered {
+  visibility: hidden;
+  /* opacity: 0.25; */
 }
