@@ -1,5 +1,5 @@
 /* TABS */
-#resources button[role='tab'] {
+#resources button[role="tab"] {
   box-sizing: border-box;
 
   padding: 12px 20px;
@@ -15,14 +15,14 @@
   border-radius: 100rem;
 }
 
-#resources button[role='tab']:first-of-type {
+#resources button[role="tab"]:first-of-type {
   margin-top: 1.25rem;
 }
-#resources button[role='tab']:last-of-type {
+#resources button[role="tab"]:last-of-type {
   margin-bottom: 1.25rem;
 }
 
-#resources button[role='tab'] > span {
+#resources button[role="tab"] > span {
   /* color: #fefef2; */
   color: var(--resources-border);
 
@@ -33,7 +33,7 @@
 }
 
 /* #resources button[role='tab'][data-headlessui-state='selected'] { */
-#resources button[role='tab'][aria-selected='true'] {
+#resources button[role="tab"][aria-selected="true"] {
   background-color: var(--slate-green);
   border: 2px solid var(--resources-border);
   align-items: center !important;
@@ -42,12 +42,12 @@
   justify-content: center !important;
 }
 /* #resources button[role='tab'][data-headlessui-state='selected'] > span { */
-#resources button[role='tab'][aria-selected='true'] > span {
+#resources button[role="tab"][aria-selected="true"] > span {
   color: #fefef2;
 }
 
 /* TAB CONTENT */
-#resources div[role='tabpanel'] {
+#resources div[role="tabpanel"] {
   padding-top: 1.25rem;
   display: flex;
   gap: 1.5rem;
@@ -155,14 +155,20 @@
   cursor: pointer;
 }
 
-#resources button[role='tab']:hover,
-#resources button[role='tab'] > span:hover,
-#resources button[role='tab'][aria-selected='false'],
-#resources button[role='tab'][aria-selected='false']:hover,
-#resources button[role='tab'][aria-selected='true']:hover,
-#resources button[role='tab'][aria-selected='true'] > span:hover {
+#resources button[role="tab"]:hover,
+#resources button[role="tab"] > span:hover,
+#resources button[role="tab"][aria-selected="false"],
+#resources button[role="tab"][aria-selected="false"]:hover,
+#resources button[role="tab"][aria-selected="true"]:hover,
+#resources button[role="tab"][aria-selected="true"] > span:hover {
   cursor: pointer !important;
   display: inline-flex !important;
   justify-content: center !important;
   align-items: center !important;
+}
+
+#resources .pretty {
+  font-style: italic;
+  text-wrap: balance;
+  text-wrap: pretty;
 }

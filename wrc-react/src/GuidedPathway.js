@@ -2,59 +2,59 @@
 export const items = [
   {
     1: {
-      heading: 'Help me make sense of what happened.',
+      heading: "Help me make sense of what happened.",
       options: {
         1: {
           index: 1,
           question:
-            'I’d like to connect with someone to help me make sense of what happened.',
+            "I’d like to connect with someone to help me make sense of what happened.",
           options: [
             {
               organization: "Workers' Resource Centre",
               online: null,
-              'by email': 'quinn@helpwrc.org',
-              'by phone': '587-374-5326',
+              "by email": "quinn@helpwrc.org",
+              "by phone": "587-374-5326",
             },
           ],
         },
         2: {
           index: 2,
-          question: 'I’d like to review relevant information',
+          question: "I’d like to review relevant information",
           options: [
             {
-              organization: 'Alberta Civil Liberties Research Centre (ACLRC)',
-              online: ['aclrc.com', 'https://aclrc.com/video-resources'],
-              'by email': null,
-              'by phone': null,
+              organization: "Alberta Civil Liberties Research Centre (ACLRC)",
+              online: ["aclrc.com", "https://aclrc.com/video-resources"],
+              "by email": null,
+              "by phone": null,
             },
           ],
         },
         3: {
           index: 3,
-          question: 'I’d like to learn more about what sexual harassment is.',
+          question: "I’d like to learn more about what sexual harassment is.",
           options: [
             {
               organization:
-                'Association of Alberta Sexual Assault Services (AASAS)',
+                "Association of Alberta Sexual Assault Services (AASAS)",
               online: [
-                'About Sexual Harassment',
-                'https://aasas.ca/about-sexual-violence/sexual-harassment/',
+                "About Sexual Harassment",
+                "https://aasas.ca/about-sexual-violence/sexual-harassment/",
               ],
-              'by email': null,
-              'by phone': null,
+              "by email": null,
+              "by phone": null,
             },
           ],
         },
         4: {
           index: 4,
-          question: 'I want to learn how my workplace can be more respectful.',
+          question: "I want to learn how my workplace can be more respectful.",
           options: [
             {
               organization:
-                'Association of Alberta Sexual Assault Services (AASAS)',
-              online: ['Moments Matter', 'https://momentsmatter.info'],
-              'by email': null,
-              'by phone': null,
+                "Association of Alberta Sexual Assault Services (AASAS)",
+              online: ["#momentsmatter", "https://momentsmatter.info"],
+              "by email": null,
+              "by phone": null,
             },
           ],
         },
@@ -63,79 +63,79 @@ export const items = [
   },
   {
     2: {
-      heading: 'Help me make sense of my employment rights.',
+      heading: "Help me make sense of my employment rights.",
       options: {
         1: {
           index: 1,
           question:
-            'I’d like to connect with someone to help me make sense of my employment rights.',
+            "I’d like to connect with someone to help me make sense of my employment rights.",
           options: [
             {
               organization: "Workers' Resource Centre",
               online: null,
-              'by email': 'info@helpwrc.org',
-              'by phone': '403-264-8100',
+              "by email": "info@helpwrc.org",
+              "by phone": "403-264-8100",
             },
           ],
         },
         2: {
           index: 2,
-          question: 'I’d like to review information about employment rights.',
+          question: "I’d like to review information about employment rights.",
           options: [
             {
-              organization: 'Centre for Public Legal Education',
-              online: ['siteName', 'https://cplea.ca/work'],
-              'by email': 'info@cplea.ca',
-              'by phone': null,
+              organization: "Centre for Public Legal Education",
+              online: ["siteName", "https://cplea.ca/work"],
+              "by email": "info@cplea.ca",
+              "by phone": null,
             },
           ],
         },
         3: {
           index: 3,
-          question: 'Show me related law and legislation information.',
+          question: "Show me related law and legislation information.",
           options: [
             {
-              organization: 'Centre for Public Legal Education',
-              online: ['cplea.cas', 'https://cplea.ca/bullying-harassment/'],
-              'by email': null,
-              'by phone': null,
+              organization: "Centre for Public Legal Education",
+              online: ["cplea.cas", "https://cplea.ca/bullying-harassment/"],
+              "by email": null,
+              "by phone": null,
             },
             {
               organization:
-                'Association des juristes d’expression francaise de l’Alberta',
-              online: ['ajefa.ca', 'https://ajefa.ca/'],
-              'by email': null,
-              'by phone': null,
+                "Association des juristes d’expression francaise de l’Alberta",
+              online: ["ajefa.ca", "https://ajefa.ca/"],
+              "by email": null,
+              "by phone": null,
             },
             {
-              organization: 'Alberta Civil Liberties Research Centre',
+              organization: "Alberta Civil Liberties Research Centre",
               online: [
-                'clrc.com',
-                'https://aclrc.com/sexual-harrasmt-in-workplace',
+                "clrc.com",
+                "https://aclrc.com/sexual-harrasmt-in-workplace",
               ],
-              'by email': null,
-              'by phone': null,
+              "by email": null,
+              "by phone": null,
             },
           ],
         },
         4: {
           index: 4,
-          question: 'I’d like to explore filing a human rights complaint.',
+          question: "I’d like to explore filing a human rights complaint.",
           options: [
             {
-              organization: 'Workers’ Resource Centre',
-              online: ['helpwrc.org', 'https://helpwrc.org'],
-              'by email': null,
-              'by phone': null,
+              organization: "Workers’ Resource Centre",
+              online: ["helpwrc.org", "https://helpwrc.org"],
+              "by email": null,
+              "by phone": null,
             },
             {
-              organization: 'Alberta Civil Liberties Research Centre (ACLRC)',
+              organization: "Alberta Civil Liberties Research Centre (ACLRC)",
               online: [
-                'aclrc.com',
-                'https://www.aclrc.com/sexual-harrasmt-in-workplace',
+                "aclrc.com",
+                "https://www.aclrc.com/sexual-harrasmt-in-workplace",
               ],
-              'by email': null,
-              'by phone': null,
+              "by email": null,
+              "by phone": null,
             },
           ],
         },
@@ -144,7 +144,7 @@ export const items = [
   },
   {
     3: {
-      heading: 'Help me make sense of my employment rights.',
+      heading: "Help me make sense of my employment rights.",
       options: {
         1: {
           index: 1,
@@ -152,16 +152,16 @@ export const items = [
           options: [
             {
               organization: "Workers' Resource Centre",
-              online: ['helpwrc.org', 'https://helpwrc.org/'],
-              'by email': 'info@helpwrc.org',
-              'by phone': '403-264-8100',
+              online: ["helpwrc.org", "https://helpwrc.org/"],
+              "by email": "info@helpwrc.org",
+              "by phone": "403-264-8100",
             },
           ],
         },
       },
     },
   },
-]
+];
 
 // # Info for Resource Cards (TABS)
 
