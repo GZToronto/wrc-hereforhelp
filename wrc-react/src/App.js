@@ -1,13 +1,13 @@
 // components
-import DecisionTreeTool from './components/DecisionTreeTool'
+import DecisionTreeTool from "./components/DecisionTreeTool";
 
 // Survey Items
 // import Survey from './components/Survey'
 // import { useState } from 'react'
 
 // styles
-import './App.css'
-import ResourcesTabTool from './components/ResourcesTabTool'
+import "./App.css";
+import ResourcesTabTool from "./components/ResourcesTabTool";
 
 // const DisplayChoices = (choice) => {
 //   console.log(choice)
@@ -15,7 +15,7 @@ import ResourcesTabTool from './components/ResourcesTabTool'
 
 function App() {
   const harassmentDefinition =
-    'Sexual harassment is unwanted, often coercive, sexual behaviour directed by one person towards another.'
+    "Sexual Harassment is unwanted, often coercive, sexual behaviour directed by one person towards another.";
 
   // OLD survey show/hide
   // const [isHide, setIsHide] = useState(true)
@@ -37,10 +37,10 @@ function App() {
 "
             >
               <em className="tooltip dot" data-text={harassmentDefinition}>
-                Sexual harassment
+                Sexual Harassment
               </em>
-            </a>{' '}
-            can take many forms.{' '}
+            </a>{" "}
+            can take many forms.{" "}
           </h1>
 
           <p className="sqsrte-large reduce-padding intro-text">
@@ -71,7 +71,7 @@ function App() {
         </section>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

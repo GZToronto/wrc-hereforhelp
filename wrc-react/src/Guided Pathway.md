@@ -368,7 +368,7 @@ www.Helpwrc.org
 
 # Blurb beside guided pathway:
 
-Sexual harassment is any unwelcome conduct, comment, gesture, or contact that is gender-related or sexual in nature that makes the recipient feel uncomfortable, unsafe, offended, or humiliated, whether intended or not.
+Sexual Harassment is any unwelcome conduct, comment, gesture, or contact that is gender-related or sexual in nature that makes the recipient feel uncomfortable, unsafe, offended, or humiliated, whether intended or not.
 
 # TOOL Headline
 

@@ -235,7 +235,7 @@ function ResourcesTabTool() {
             <div className="tab contact-card">
               <p className="org">#momentsmatter</p>
               <p className="org-description">
-                hrough simple, relatable stories, we’re showing Alberta leaders
+                Through simple, relatable stories, we’re showing Alberta leaders
                 how easy it can be to strengthen and grow positive workplace
                 cultures that help people feel safe and supported, help them
                 grow and succeed – and help stop sexual harassment.

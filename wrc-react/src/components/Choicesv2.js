@@ -29,7 +29,7 @@ const decisionTree = {
                 online: [null, null],
                 email: "quinn@helpwrc.org",
                 emailSubject:
-                  "#hereforhelp - Website inquiry: Sexual harassment at work",
+                  "#hereforhelp - Website inquiry: Sexual Harassment at work",
                 emailBody: `Hi,${br}${br}I want to learn more about sexual harassment employment rights and if I can file a claim or complaint.`,
                 phone: "587-374-5326",
               },
@@ -97,7 +97,7 @@ const decisionTree = {
             online: [null, null],
             email: "quinn@helpwrc.org",
             emailSubject:
-              "#hereforhelp - Website inquiry: Sexual harassment at work",
+              "#hereforhelp - Website inquiry: Sexual Harassment at work",
             emailBody: `Hi,${br}${br}I want to learn more about sexual harassment employment rights and if I can file a claim or complaint.`,
             phone: "587-374-5326",
           },
