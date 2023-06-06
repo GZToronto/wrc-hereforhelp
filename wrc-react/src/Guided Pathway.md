@@ -36,7 +36,7 @@ console.log(convertToPlain(htmlString));
 - I’d like to connect with someone to help me make sense of what happened.
   WRC
   587-374-5326
-  quinn@helpwrc.org
+  contact@hereforhelp.ca
 
   ```
   {
@@ -46,7 +46,7 @@ console.log(convertToPlain(htmlString));
         {
           "organization":"Workers' Resource Centre",
           "online": null,
-          "by email":"quinn@helpwrc.org",
+          "by email":"contact@hereforhelp.ca",
           "by phone":"587-374-5326",
         }
       ]

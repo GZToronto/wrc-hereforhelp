@@ -26,11 +26,18 @@ const decisionTree = {
                 orgGA4: "WRC",
                 description:
                   "The WRC is an employment and human rights advocacy agency that provides casework support, public legal education, and support with workplace sexual harassment issues. We serve all of Alberta and our services are <em>free</em>.",
-                online: [null, null],
-                email: "quinn@helpwrc.org",
+                onlineCTA: "Learn more about the",
+                online: ["Workers' Resource Centre", "https://helpwrc.org"],
+                // online: [null, null],
+                // REFACTOR - change to email generic address
+                // email: "contact@hereforhelp.ca",
+                emailCTA: "Email a",
+                emailCTAname: "Legal Specialist",
+                email: "contact@hereforhelp.ca",
                 emailSubject:
                   "#hereforhelp - Website inquiry: Sexual Harassment at work",
                 emailBody: `Hi,${br}${br}I want to learn more about sexual harassment employment rights and if I can file a claim or complaint.`,
+                phoneCTA: "Call or text",
                 phone: "587-374-5326",
               },
             },
@@ -44,8 +51,11 @@ const decisionTree = {
                 description: `<p>Alberta’s One Line for Sexual Violence is a toll-free talk, text, and chat service that provides emotional support, information, and referral to anyone who has experienced or been impacted by sexual violence.</p>
                 <p>One Line can provide support in the moment while also connecting Albertans to the nearest sexual assault centre for access to specialized services for individuals, families and communities across the province.</p>
                 <p>Support is available seven days a week, with access to interpretation services in over 200 languages.</p>`,
-                online: [null, null],
+                onlineCTA: "Learn more about",
+                online: ["Alberta's One Line", "https://aasas.ca/get-support/"], emailCTA: null,
+                emailCTAname: null,
                 email: null,
+                phoneCTA: "Call or text",
                 phone: "1-866-403-8000",
               },
             },
@@ -59,8 +69,12 @@ const decisionTree = {
                 description: `<p>Alberta’s One Line for Sexual Violence is a toll-free talk, text, and chat service that provides emotional support, information, and referral to anyone who has experienced or been impacted by sexual violence.</p>
                 <p>One Line can provide support in the moment while also connecting Albertans to the nearest sexual assault centre for access to specialized services for individuals, families and communities across the province.</p>
                 <p>Support is available seven days a week, with access to interpretation services in over 200 languages.</p>`,
-                online: [null, null],
+                onlineCTA: "Learn more about",
+                online: ["Alberta's One Line", "https://aasas.ca/get-support/"],
+                emailCTA: null,
+                emailCTAname: null,
                 email: null,
+                phoneCTA: "Call or text",
                 phone: "1-866-403-8000",
               },
             },
@@ -76,8 +90,12 @@ const decisionTree = {
             description: `<p>Alberta’s One Line for Sexual Violence is a toll-free talk, text, and chat service that provides emotional support, information, and referral to anyone who has experienced or been impacted by sexual violence.</p>
                 <p>One Line can provide support in the moment while also connecting Albertans to the nearest sexual assault centre for access to specialized services for individuals, families and communities across the province.</p>
                 <p>Support is available seven days a week, with access to interpretation services in over 200 languages.</p>`,
-            online: [null, null],
+            onlineCTA: "Learn more about",
+            online: ["Alberta's One Line", "https://aasas.ca/get-support/"],
+            emailCTA: null,
+            emailCTAname: null,
             email: null,
+            phoneCTA: "Call or text",
             phone: "1-866-403-8000",
           },
         },
@@ -94,11 +112,18 @@ const decisionTree = {
             orgGA4: "WRC",
             description:
               "The WRC is an employment and human rights advocacy agency that provides casework support, public legal education, and support with workplace sexual harassment issues. We serve all of Alberta and our services are <em>free</em>.",
-            online: [null, null],
-            email: "quinn@helpwrc.org",
+            onlineCTA: "Learn more about the",
+            online: ["Workers' Resource Centre", "https://helpwrc.org"],
+            // online: [null, null],
+            // REFACTOR - change to email generic address
+            // email: "contact@hereforhelp.ca",
+            emailCTA: "Email a",
+            emailCTAname: "Legal Specialist",
+            email: "contact@hereforhelp.ca",
             emailSubject:
               "#hereforhelp - Website inquiry: Sexual Harassment at work",
             emailBody: `Hi,${br}${br}I want to learn more about sexual harassment employment rights and if I can file a claim or complaint.`,
+            phoneCTA: "Call or text",
             phone: "587-374-5326",
           },
         },
@@ -112,11 +137,15 @@ const decisionTree = {
             // "Positive, respectful work cultures boost personal well-being, team success, and job performance. They also stop sexual harassment.",
             description:
               "At work, little moments make a big difference. Positive, respectful work cultures boost personal well-being, team success, and job performance. They also stop sexual harassment.<br /><br />Join the campaign and/or learn about engagement strategies toward ending workplace sexual harassment.",
-            online: [null, null],
+            onlineCTA: "Learn more about",
+            online: ["#momentsmatter", "https://momentsmatter.info/"],
+            emailCTA: `Email the`,
+            emailCTAname: "#momentsmatter Coordinator",
             email: "sbrown@aasas.ca",
             emailSubject:
               "#hereforhelp - Website inquiry: I want to learn how my workplace can be safer",
             emailBody: `Hi,${br}${br}I want to learn more about how my workplace can be safer when it comes to sexual harassment.`,
+            phoneCTA: "Call",
             phone: "403-237-6905, 268",
           },
         },
@@ -130,11 +159,15 @@ const decisionTree = {
             //   "Positive, respectful work cultures boost personal well-being, team success, and job performance. They also stop sexual harassment.",
             description:
               "Most people understand that workplace culture is the key to team success, job performance, and employee health and safety. But a positive culture is also an important defence against sexual harassment. Building and growing positive work cultures is easier than you might think.",
-            online: [null, null],
+            emailCTA: `Email the`,
+            emailCTAname: "#momentsmatter Coordinator",
             email: "sbrown@aasas.ca",
             emailSubject:
               "#hereforhelp - Website inquiry: I want to learn how my workplace can be safer",
             emailBody: `Hi,${br}${br}I am on the leadership team at my workplace, and I want to learn how to make my workplace safe from sexual harassment.`,
+            onlineCTA: "Learn more about",
+            online: ["#momentsmatter", "https://momentsmatter.info/"],
+            phoneCTA: "Call",
             phone: "403-237-6905, 268",
           },
         },
@@ -149,11 +182,15 @@ const decisionTree = {
             orgPost: null,
             orgGA4: "ACLRC",
             description: `The ACLRC’s mission is to promote respect for civil liberties and human rights in Alberta through research and education to contribute to a more just and inclusive community. Explore their suite of short videos about sexual harassment and related considerations by clicking on the link below.`,
+            onlineCTA: "Learn about sexual harassment from the",
             online: [
-              "aclrc.com",
+              "Alberta Civil Liberties Research Centre",
               "https://www.aclrc.com/sexual-harrasmt-in-workplace",
             ],
+            emailCTA: null,
+            emailCTAname: null,
             email: null,
+            phoneCTA: null,
             phone: null,
 
             orgPre2: "Learn about sexual harassment from the ",
@@ -162,8 +199,12 @@ const decisionTree = {
             orgGA42: "CPLEA",
             description2:
               "CPLEA creates resources that help people understand their rights and obligations under the law. They strive to improve both access to justice and the quality of justice available to Albertans. They share free legal information on a variety of topics that impact Albertans via workshops, articles, websites, FAQs, info sheets, and more.",
-            online2: ["cplea.ca", "https://www.cplea.ca/bullying-harassment/"],
+            online2CTA: "Learn about sexual harassment from the",
+            online2: ["Centre for Public Legal Education", "https://www.cplea.ca/bullying-harassment/"],
+            email2CTA: null,
+            email2CTAname: null,
             email2: null,
+            phone2CTA: null,
             phone2: null,
           },
         },
@@ -177,15 +218,19 @@ const decisionTree = {
             //   "Our unique curriculum is built with best practices for adult online learning and is proven to build the skills that help people understand, respond to, and prevent sexual harassment.",
             description:
               "Workplace culture is the key to team success, job performance, and employee health and safety. Positive, respectful work cultures boost personal well-being, team success, and job performance. But a positive culture is also an important defence against sexual harassment. Learn about engagement strategies toward ending workplace sexual harassment with #MomentsMatter.",
+            onlineCTA: "Learn more about",
             online: [
               // "aasas.ca",
               "#momentsmatter",
               "https://aasas.ca/training/engagement-strategies-toward-ending-workplace-sexual-harassment/",
             ],
+            emailCTA: `Email the`,
+            emailCTAname: "#momentsmatter Coordinator",
             email: "sbrown@aasas.ca",
             emailSubject:
               "#hereforhelp - Website inquiry: Engagement strategies toward ending workplace sexual harassment.",
             emailBody: `Hi,${br}${br}I want to learn more about the training you offer.`,
+            phoneCTA: "Call",
             phone: "403-237-6905, 268",
           },
         },
@@ -204,11 +249,18 @@ const decisionTree = {
                 orgGA4: "WRC",
                 description:
                   "The WRC is an employment and human rights advocacy agency that provides casework support, public legal education, and support with workplace sexual harassment issues. We serve all of Alberta and our services are <em>free</em>.",
-                online: [null, null],
-                email: "quinn@helpwrc.org",
+                onlineCTA: "Learn more about the",
+                online: ["Workers' Resource Centre", "https://helpwrc.org"],
+                // online: [null, null],
+                // REFACTOR - change to email generic address
+                // email: "contact@hereforhelp.ca",
+                emailCTA: "Email a",
+                emailCTAname: "Legal Specialist",
+                email: "contact@hereforhelp.ca",
                 emailSubject:
                   "#hereforhelp - Website inquiry: Sexual harassment at work",
                 emailBody: `Hi,${br}${br}I want to learn more about sexual harassment employment rights and if I can file a claim or complaint.`,
+                phoneCTA: "Call or text",
                 phone: "587-374-5326",
               },
             },
@@ -224,8 +276,12 @@ const decisionTree = {
                   <p>One Line can provide support in the moment while also connecting Albertans to the nearest sexual assault centre for access to specialized services for individuals, families and communities across the province.</p>
                   <p>Support is available seven days a week, with access to interpretation services in over 200 languages.</p>`,
                 // https://aasas.ca/get-support/
-                online: [null, null],
+                onlineCTA: "Learn more about",
+                online: ["Alberta's One Line", "https://aasas.ca/get-support/"],
+                emailCTA: null,
+                emailCTAname: null,
                 email: null,
+                phoneCTA: "Call or text",
                 phone: "1-866-403-8000",
               },
             },
@@ -243,8 +299,12 @@ const decisionTree = {
               <p>Alberta’s One Line for Sexual Violence is a toll-free talk, text, and chat service that provides emotional support, information, and referral to anyone who has experienced or been impacted by sexual violence.</p>
               <p>One Line can provide support in the moment while also connecting Albertans to the nearest sexual assault centre for access to specialized services for individuals, families and communities across the province.</p>
               <p>Support is available seven days a week, with access to interpretation services in over 200 languages.</p>`,
-            online: [null, null],
+            onlineCTA: "Learn more about",
+            online: ["Alberta's One Line", "https://aasas.ca/get-support/"],
+            emailCTA: null,
+            emailCTAname: null,
             email: null,
+            phoneCTA: "Call or text",
             phone: "1-866-403-8000",
           },
         },
@@ -262,11 +322,18 @@ const decisionTree = {
             description: `
               <p>Reach out to a Legal Specialist from the Workers’ Resource Centre to learn about human rights complaints.</p>
               <p>The WRC is an employment and human rights advocacy agency that provides casework support, public legal education, and support with workplace sexual harassment issues. We serve all of Alberta and our services are <em>free</em>.</p>`,
-            online: [null, null],
-            email: "quinn@helpwrc.org",
+            onlineCTA: "Learn more about the",
+            online: ["Workers' Resource Centre", "https://helpwrc.org"],
+            // online: [null, null],
+            // REFACTOR - change to email generic address
+            // email: "contact@hereforhelp.ca",
+            emailCTA: "Email a",
+            emailCTAname: "Legal Specialist",
+            email: "contact@hereforhelp.ca",
             emailSubject:
               "#hereforhelp - Website inquiry: I’d like legal information about sexual harassment.",
             emailBody: `Hi,${br}${br}I want to learn more about sexual harassment employment rights and if I can file a claim or complaint.`,
+            phoneCTA: "Call or text",
             phone: "587-374-5326",
           },
         },
@@ -281,10 +348,14 @@ const decisionTree = {
             orgGA4: "CPLEA",
             // description:
             //   "Find more information about sexual harassment and the law by clicking the link below.",
+            onlineCTA: "Learn about sexual harassment from the",
             online: ["cplea.ca", "https://www.cplea.ca/bullying-harassment/"],
+            emailCTA: null,
+            emailCTAname: null,
             email: null,
             emailSubject: null,
             emailBody: null,
+            phoneCTA: null,
             phone: null,
           },
         },
@@ -298,12 +369,16 @@ const decisionTree = {
           "Association des juristes d'expression française de l'Alberta",
         orgGA4: "AJEFA",
         description: `Situé à La Cité francophone d'Edmonton et à Guinness House à Calgary, l'AJEFA et son centre d'information juridique assure des services gratuits et confidentiels d'information juridique, d'orientation et d'accompagnement aux personnes faisant face à un problème d'ordre juridique.`,
-        online: ["infojuri.ca", "https://infojuri.ca/fr/"],
+        onlineCTA: "Trouvez des ressources en ligne sur",
+        online: ["Association des juristes d'expression française de l'Alberta", "https://infojuri.ca/fr/"],
         email:
           // Question%20sur%20le%20harc%C3%A8lement%20sexuel&body=
           "question@infojuri.ca",
+        emailCTA: `Envoyer un e-mail à un`,
+        emailCTAname: `spécialiste juridique`,
         emailSubject: null,
         emailBody: `Bonjour,${br}${br}Je cherche des ressources en français`,
+        phoneCTA: null,
         phone: null,
         // },
         // },
@@ -976,13 +1051,14 @@ export const DecisionTree = () => {
                 "contact-item web" + state.currentQuestion.result.orgGA4
               }
             >
-              <a href={state.currentQuestion.result.online[1]}>
+              {state.currentQuestion.result.onlineCTA && <> <span className="exitCTA">{state.currentQuestion.result.onlineCTA}</span>  </>}
+              <a data-exitType="online" href={state.currentQuestion.result.online[1]}>
                 {state.currentQuestion.result.online[0]}
               </a>
             </p>
           )}
-          {/* 'quinn@helpwrc.org?subject=Test email!&body=Email body content TBD.', */}
-          {/* email: 'quinn@helpwrc.org', */}
+          {/* 'contact@hereforhelp.ca?subject=Test email!&body=Email body content TBD.', */}
+          {/* email: 'contact@hereforhelp.ca', */}
           {/* emailSubject: 'Test email', */}
           {/* emailBody: 'Email body content TBD.', */}
           {state.currentQuestion.result.email && (
@@ -992,7 +1068,9 @@ export const DecisionTree = () => {
                 "contact-item email" + state.currentQuestion.result.orgGA4
               }
             >
+              {state.currentQuestion.result.emailCTA && <> <span className="exitCTA">{state.currentQuestion.result.emailCTA}</span>  </>}
               <a
+                data-exitType="email"
                 href={
                   "mailto:" +
                   state.currentQuestion.result.email +
@@ -1002,7 +1080,7 @@ export const DecisionTree = () => {
                   state.currentQuestion.result.emailBody
                 }
               >
-                {state.currentQuestion.result.email}
+                {state.currentQuestion.result.emailCTAname}
               </a>
             </p>
           )}
@@ -1013,13 +1091,14 @@ export const DecisionTree = () => {
                 "contact-item telephone" + state.currentQuestion.result.orgGA4
               }
             >
-              <a href={"tel:" + state.currentQuestion.result.phone}>
+              {state.currentQuestion.result.phoneCTA && <> <span className="exitCTA">{state.currentQuestion.result.phoneCTA}</span>  </>}
+              <a data-exitType="phone" href={"tel:" + state.currentQuestion.result.phone}>
                 {state.currentQuestion.result.phone}
               </a>
             </p>
           )}
           {state.currentQuestion.result.organization2 &&
-          state.currentQuestion.result.organization2 !== undefined ? (
+            state.currentQuestion.result.organization2 !== undefined ? (
             <p className="organization two">
               {state.currentQuestion.result.orgPre2 && (
                 <>{state.currentQuestion.result.orgPre2}</>
@@ -1035,7 +1114,7 @@ export const DecisionTree = () => {
             <></>
           )}
           {state.currentQuestion.result.description2 &&
-          state.currentQuestion.result.description2 !== undefined ? (
+            state.currentQuestion.result.description2 !== undefined ? (
             <p
               className="organization description"
               dangerouslySetInnerHTML={{
@@ -1046,14 +1125,15 @@ export const DecisionTree = () => {
             <></>
           )}
           {state.currentQuestion.result.online2 &&
-          state.currentQuestion.result.online2 !== undefined ? (
+            state.currentQuestion.result.online2 !== undefined ? (
             // <p className="contact-item web">
             <p
               className={
                 "contact-item web" + state.currentQuestion.result.orgGA4
               }
             >
-              <a href={state.currentQuestion.result.online2[1]}>
+              {state.currentQuestion.result.online2CTA && <> <span className="exitCTA">{state.currentQuestion.result.online2CTA}</span>  </>}
+              <a data-exitType="online" href={state.currentQuestion.result.online2[1]}>
                 {state.currentQuestion.result.online2[0]}
               </a>
             </p>
@@ -1061,13 +1141,14 @@ export const DecisionTree = () => {
             <></>
           )}
           {state.currentQuestion.result.email2 &&
-          state.currentQuestion.result.email2 !== undefined ? (
+            state.currentQuestion.result.email2 !== undefined ? (
             // <p className="contact-item email">
             <p
               className={
                 "contact-item email" + state.currentQuestion.result.orgGA4
               }
             >
+              {state.currentQuestion.result.email2CTA && <> <span className="exitCTA">{state.currentQuestion.result.email2CTA}</span>  </>}
               <a href={"mailto:" + state.currentQuestion.result.email2}>
                 {state.currentQuestion.result.email2}
               </a>
@@ -1076,13 +1157,14 @@ export const DecisionTree = () => {
             <></>
           )}
           {state.currentQuestion.result.phone2 &&
-          state.currentQuestion.result.phone2 !== null ? (
+            state.currentQuestion.result.phone2 !== null ? (
             // <p className="contact-item telephone">
             <p
               className={
                 "contact-item telephone" + state.currentQuestion.result.orgGA4
               }
             >
+              {state.currentQuestion.result.phone2CTA && <> <span className="exitCTA">{state.currentQuestion.result.phone2CTA}</span>  </>}
               <a href={"tel:" + state.currentQuestion.result.phone2}>
                 {state.currentQuestion.result.phone2}
               </a>

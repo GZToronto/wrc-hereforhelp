@@ -12,7 +12,7 @@ export const items = [
             {
               organization: "Workers' Resource Centre",
               online: null,
-              "by email": "quinn@helpwrc.org",
+              "by email": "contact@hereforhelp.ca",
               "by phone": "587-374-5326",
             },
           ],
