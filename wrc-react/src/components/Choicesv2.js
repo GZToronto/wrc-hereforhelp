@@ -52,7 +52,8 @@ const decisionTree = {
                 <p>One Line can provide support in the moment while also connecting Albertans to the nearest sexual assault centre for access to specialized services for individuals, families and communities across the province.</p>
                 <p>Support is available seven days a week, with access to interpretation services in over 200 languages.</p>`,
                 onlineCTA: "Learn more about",
-                online: ["Alberta's One Line", "https://aasas.ca/get-support/"], emailCTA: null,
+                online: ["Alberta's One Line", "https://aasas.ca/get-support/"],
+                emailCTA: null,
                 emailCTAname: null,
                 email: null,
                 phoneCTA: "Call or text",
@@ -200,7 +201,10 @@ const decisionTree = {
             description2:
               "CPLEA creates resources that help people understand their rights and obligations under the law. They strive to improve both access to justice and the quality of justice available to Albertans. They share free legal information on a variety of topics that impact Albertans via workshops, articles, websites, FAQs, info sheets, and more.",
             online2CTA: "Learn about sexual harassment from the",
-            online2: ["Centre for Public Legal Education", "https://www.cplea.ca/bullying-harassment/"],
+            online2: [
+              "Centre for Public Legal Education",
+              "https://www.cplea.ca/bullying-harassment/",
+            ],
             email2CTA: null,
             email2CTAname: null,
             email2: null,
@@ -370,13 +374,16 @@ const decisionTree = {
         orgGA4: "AJEFA",
         description: `Situé à La Cité francophone d'Edmonton et à Guinness House à Calgary, l'AJEFA et son centre d'information juridique assure des services gratuits et confidentiels d'information juridique, d'orientation et d'accompagnement aux personnes faisant face à un problème d'ordre juridique.`,
         onlineCTA: "Trouvez des ressources en ligne sur",
-        online: ["Association des juristes d'expression française de l'Alberta", "https://infojuri.ca/fr/"],
+        online: [
+          "Association des juristes d'expression française de l'Alberta",
+          "https://infojuri.ca/fr/",
+        ],
         email:
           // Question%20sur%20le%20harc%C3%A8lement%20sexuel&body=
           "question@infojuri.ca",
         emailCTA: `Envoyer un e-mail à un`,
         emailCTAname: `spécialiste juridique`,
-        emailSubject: null,
+        emailSubject: "Besoin d'information",
         emailBody: `Bonjour,${br}${br}Je cherche des ressources en français`,
         phoneCTA: null,
         phone: null,
@@ -1051,8 +1058,18 @@ export const DecisionTree = () => {
                 "contact-item web" + state.currentQuestion.result.orgGA4
               }
             >
-              {state.currentQuestion.result.onlineCTA && <> <span className="exitCTA">{state.currentQuestion.result.onlineCTA}</span>  </>}
-              <a data-exitType="online" href={state.currentQuestion.result.online[1]}>
+              {state.currentQuestion.result.onlineCTA && (
+                <>
+                  {" "}
+                  <span className="exitCTA">
+                    {state.currentQuestion.result.onlineCTA}
+                  </span>{" "}
+                </>
+              )}
+              <a
+                data-exitType="online"
+                href={state.currentQuestion.result.online[1]}
+              >
                 {state.currentQuestion.result.online[0]}
               </a>
             </p>
@@ -1068,7 +1085,14 @@ export const DecisionTree = () => {
                 "contact-item email" + state.currentQuestion.result.orgGA4
               }
             >
-              {state.currentQuestion.result.emailCTA && <> <span className="exitCTA">{state.currentQuestion.result.emailCTA}</span>  </>}
+              {state.currentQuestion.result.emailCTA && (
+                <>
+                  {" "}
+                  <span className="exitCTA">
+                    {state.currentQuestion.result.emailCTA}
+                  </span>{" "}
+                </>
+              )}
               <a
                 data-exitType="email"
                 href={
@@ -1091,14 +1115,24 @@ export const DecisionTree = () => {
                 "contact-item telephone" + state.currentQuestion.result.orgGA4
               }
             >
-              {state.currentQuestion.result.phoneCTA && <> <span className="exitCTA">{state.currentQuestion.result.phoneCTA}</span>  </>}
-              <a data-exitType="phone" href={"tel:" + state.currentQuestion.result.phone}>
+              {state.currentQuestion.result.phoneCTA && (
+                <>
+                  {" "}
+                  <span className="exitCTA">
+                    {state.currentQuestion.result.phoneCTA}
+                  </span>{" "}
+                </>
+              )}
+              <a
+                data-exitType="phone"
+                href={"tel:" + state.currentQuestion.result.phone}
+              >
                 {state.currentQuestion.result.phone}
               </a>
             </p>
           )}
           {state.currentQuestion.result.organization2 &&
-            state.currentQuestion.result.organization2 !== undefined ? (
+          state.currentQuestion.result.organization2 !== undefined ? (
             <p className="organization two">
               {state.currentQuestion.result.orgPre2 && (
                 <>{state.currentQuestion.result.orgPre2}</>
@@ -1114,7 +1148,7 @@ export const DecisionTree = () => {
             <></>
           )}
           {state.currentQuestion.result.description2 &&
-            state.currentQuestion.result.description2 !== undefined ? (
+          state.currentQuestion.result.description2 !== undefined ? (
             <p
               className="organization description"
               dangerouslySetInnerHTML={{
@@ -1125,15 +1159,25 @@ export const DecisionTree = () => {
             <></>
           )}
           {state.currentQuestion.result.online2 &&
-            state.currentQuestion.result.online2 !== undefined ? (
+          state.currentQuestion.result.online2 !== undefined ? (
             // <p className="contact-item web">
             <p
               className={
                 "contact-item web" + state.currentQuestion.result.orgGA4
               }
             >
-              {state.currentQuestion.result.online2CTA && <> <span className="exitCTA">{state.currentQuestion.result.online2CTA}</span>  </>}
-              <a data-exitType="online" href={state.currentQuestion.result.online2[1]}>
+              {state.currentQuestion.result.online2CTA && (
+                <>
+                  {" "}
+                  <span className="exitCTA">
+                    {state.currentQuestion.result.online2CTA}
+                  </span>{" "}
+                </>
+              )}
+              <a
+                data-exitType="online"
+                href={state.currentQuestion.result.online2[1]}
+              >
                 {state.currentQuestion.result.online2[0]}
               </a>
             </p>
@@ -1141,14 +1185,21 @@ export const DecisionTree = () => {
             <></>
           )}
           {state.currentQuestion.result.email2 &&
-            state.currentQuestion.result.email2 !== undefined ? (
+          state.currentQuestion.result.email2 !== undefined ? (
             // <p className="contact-item email">
             <p
               className={
                 "contact-item email" + state.currentQuestion.result.orgGA4
               }
             >
-              {state.currentQuestion.result.email2CTA && <> <span className="exitCTA">{state.currentQuestion.result.email2CTA}</span>  </>}
+              {state.currentQuestion.result.email2CTA && (
+                <>
+                  {" "}
+                  <span className="exitCTA">
+                    {state.currentQuestion.result.email2CTA}
+                  </span>{" "}
+                </>
+              )}
               <a href={"mailto:" + state.currentQuestion.result.email2}>
                 {state.currentQuestion.result.email2}
               </a>
@@ -1157,14 +1208,21 @@ export const DecisionTree = () => {
             <></>
           )}
           {state.currentQuestion.result.phone2 &&
-            state.currentQuestion.result.phone2 !== null ? (
+          state.currentQuestion.result.phone2 !== null ? (
             // <p className="contact-item telephone">
             <p
               className={
                 "contact-item telephone" + state.currentQuestion.result.orgGA4
               }
             >
-              {state.currentQuestion.result.phone2CTA && <> <span className="exitCTA">{state.currentQuestion.result.phone2CTA}</span>  </>}
+              {state.currentQuestion.result.phone2CTA && (
+                <>
+                  {" "}
+                  <span className="exitCTA">
+                    {state.currentQuestion.result.phone2CTA}
+                  </span>{" "}
+                </>
+              )}
               <a href={"tel:" + state.currentQuestion.result.phone2}>
                 {state.currentQuestion.result.phone2}
               </a>
