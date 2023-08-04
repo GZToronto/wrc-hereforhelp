@@ -160,7 +160,9 @@ function ResourcesTabTool() {
                 <a href="tel:1-780-450-2443">780-450-2443</a>
               </p>
               <p className="email">
-                <a href="mailto:bureau@ajefa.ca">bureau@ajefa.ca</a>
+                <a href="mailto:bureau@ajefa.ca?subject=Besoin d'information">
+                  bureau@ajefa.ca
+                </a>
               </p>
               <p className="web">
                 <a href="https://ajefa.ca">ajefa.ca</a>
