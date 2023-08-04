@@ -213,11 +213,12 @@ function ResourcesTabTool() {
             <div className="tab contact-card">
               <p className="org">Centre for Public Legal Education Alberta</p>
               <p className="org-description">
-                CPLEA mission is to engage the public in promoting, accessing,
-                and enhancing justice in Canada. They share legal information
-                via workshops, articles, websites, FAQ sheets, etc on a variety
-                of topics including Family Law, Employment Law, Human Rights
-                Law, Landlord & Tenant, etc.
+                CPLEA creates resources that help people understand their rights
+                and obligations under the law. They strive to improve both
+                access to justice and the quality of justice available to
+                Albertans. They share free legal information on a variety of
+                topics that impact Albertans via workshops, articles, websites,
+                FAQs, info sheets, and more.
               </p>
               <hr />
               {/* <p className="phone">
