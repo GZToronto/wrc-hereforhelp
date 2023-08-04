@@ -7,6 +7,7 @@ The build is minified and the filenames include the hashes.
 ### Deployment
 
 Deployment is currently manual. Huzzah, Squarespace.
+https://smilodon-violin-sppr.squarespace.com/config/pages/website-tools/code-injection
 
 ```
 <script async src="https://tally.so/widgets/embed.js"></script>
