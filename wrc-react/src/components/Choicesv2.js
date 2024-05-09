@@ -12,7 +12,7 @@ const br = "%0D%0A";
 
 const decisionTree = {
   options: {
-    "I may have experienced sexual harassment": {
+    "I may have experienced sexual harassment.": {
       options: {
         "It happened at work": {
           options: {
