@@ -40,7 +40,7 @@ function App() {
                 Sexual Harassment
               </em>
             </a>{" "}
-            can take many forms.{" "}
+            can take many forms..{" "}
           </h1>
 
           <p className="sqsrte-large reduce-padding intro-text">
