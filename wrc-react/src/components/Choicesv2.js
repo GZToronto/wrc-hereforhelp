@@ -12,7 +12,7 @@ const br = "%0D%0A";
 
 const decisionTree = {
   options: {
-    "I may have experienced sexual harassment.": {
+    "I may have experienced sexual harassment": {
       options: {
         "It happened at work": {
           options: {
@@ -140,14 +140,14 @@ const decisionTree = {
               "At work, little moments make a big difference. Positive, respectful work cultures boost personal well-being, team success, and job performance. They also stop sexual harassment.<br /><br />Join the campaign and/or learn about engagement strategies toward ending workplace sexual harassment.",
             onlineCTA: "Learn more about",
             online: ["#momentsmatter", "https://momentsmatter.info/"],
-            emailCTA: `Email the`,
-            emailCTAname: "#momentsmatter Coordinator",
-            email: "sbrown@aasas.ca",
+            emailCTA: `Email`,
+            emailCTAname: "#momentsmatter",
+            email: "momentsmatterab@aasas.ca",
             emailSubject:
               "#hereforhelp - Website inquiry: I want to learn how my workplace can be safer",
             emailBody: `Hi,${br}${br}I want to learn more about how my workplace can be safer when it comes to sexual harassment.`,
             phoneCTA: "Call",
-            phone: "403-237-6905, 268",
+            phone: "403-300-0205 ext. 209",
           },
         },
         "I am on the leadership team at my workplace": {
@@ -160,16 +160,16 @@ const decisionTree = {
             //   "Positive, respectful work cultures boost personal well-being, team success, and job performance. They also stop sexual harassment.",
             description:
               "Most people understand that workplace culture is the key to team success, job performance, and employee health and safety. But a positive culture is also an important defence against sexual harassment. Building and growing positive work cultures is easier than you might think.",
-            emailCTA: `Email the`,
-            emailCTAname: "#momentsmatter Coordinator",
-            email: "sbrown@aasas.ca",
+            emailCTA: `Email`,
+            emailCTAname: "#momentsmatter",
+            email: "momentsmatterab@aasas.ca",
             emailSubject:
               "#hereforhelp - Website inquiry: I want to learn how my workplace can be safer",
             emailBody: `Hi,${br}${br}I am on the leadership team at my workplace, and I want to learn how to make my workplace safe from sexual harassment.`,
             onlineCTA: "Learn more about",
             online: ["#momentsmatter", "https://momentsmatter.info/"],
             phoneCTA: "Call",
-            phone: "403-237-6905, 268",
+            phone: "403-300-0205 ext. 209",
           },
         },
       },
@@ -228,14 +228,14 @@ const decisionTree = {
               "#momentsmatter",
               "https://aasas.ca/training/engagement-strategies-toward-ending-workplace-sexual-harassment/",
             ],
-            emailCTA: `Email the`,
-            emailCTAname: "#momentsmatter Coordinator",
-            email: "sbrown@aasas.ca",
+            emailCTA: `Email`,
+            emailCTAname: "#momentsmatter",
+            email: "momentsmatterab@aasas.ca",
             emailSubject:
               "#hereforhelp - Website inquiry: Engagement strategies toward ending workplace sexual harassment.",
             emailBody: `Hi,${br}${br}I want to learn more about the training you offer.`,
             phoneCTA: "Call",
-            phone: "403-237-6905, 268",
+            phone: "403-300-0205 ext. 209",
           },
         },
       },
